@@ -83,14 +83,14 @@ const Navbar = () => {
             ))}
             
             {/* Dark Mode Toggle */}
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               onClick={() => setDarkMode(!darkMode)}
               className="p-2"
             >
               {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile menu button */}
