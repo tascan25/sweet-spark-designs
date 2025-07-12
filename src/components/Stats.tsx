@@ -5,7 +5,7 @@ import { Users, Award, Clock, Heart } from "lucide-react";
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true });
   
   const stats = [
     {
@@ -102,7 +102,7 @@ const StatCard = ({ stat, isInView, delay }: { stat: any; isInView: boolean; del
       initial={{ opacity: 0, y: 30, scale: 0.9 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
       className="text-center group"
     >
       <motion.div
