@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -85,6 +86,7 @@ const Hero = () => {
           </p>
         </motion.div>
 
+          
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,7 +98,7 @@ const Hero = () => {
             className="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-6 text-lg rounded-2xl shadow-glow transition-all duration-300 hover:scale-105"
           >
             <Heart className="w-5 h-5 mr-2" />
-            Explore Our Sweets
+            <Link to={"/products"}>Explore Our Sweets</Link>
           </Button>
           
           <Button
@@ -104,26 +106,27 @@ const Hero = () => {
             size="lg"
             className="border-2 border-saffron-500 text-saffron-600 hover:bg-saffron-50 px-8 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105"
           >
-            Our Story
+            <Link to={"/about"}>Our Story</Link>
           </Button>
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        <motion.a
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-20 absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className=" mt-50 absolute  left-1/2 transform -translate-x-1/2"
+          href="#feature_product"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center text-gray-500"
+            className="flex flex-col items-center text-gray-800"
           >
-            <span className="text-sm mb-2">Scroll to discover</span>
+            <span className="text-lg mb-2 font-semibold">Scroll to discover</span>
             <ChevronDown className="w-6 h-6" />
           </motion.div>
-        </motion.div>
+        </motion.a>
       </div>
     </section>
   );
