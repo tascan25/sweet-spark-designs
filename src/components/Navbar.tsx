@@ -4,11 +4,16 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaShoppingCart } from "react-icons/fa";
+import { useContext } from "react";
+import { WholeAppContext } from "@/context/store";
+import { IoCartOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const {cartCount} = useContext(WholeAppContext)
   const location = useLocation();
 
   useEffect(() => {
@@ -32,6 +37,8 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Products", path: "/products" },
     { name: "Contact", path: "/contact" },
+    {name:"Liked", path:"/liked"}
+
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -82,26 +89,26 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* Dark Mode Toggle */}
-            {/* <Button
+            {/* CART BUTTON  */}
+            <Button
               variant="ghost"
               size="sm"
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2"
+              className="p-2 relative"
             >
-              {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </Button> */}
+              <Link to={"/cart"}>{cartCount===0?<IoCartOutline/>:<FaShoppingCart/>}</Link>
+              <span className="absolute bottom-5 right-0 text-gradient">{cartCount}</span>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <Button
+           <Button
               variant="ghost"
               size="sm"
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2"
+              className="p-2 relative"
             >
-              {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              <Link to={"/cart"}>{cartCount===0?<IoCartOutline color="black"/>:<FaShoppingCart/>}</Link>
+              <span className="absolute bottom-5 right-0 text-gradient">{cartCount}</span>
             </Button>
             <Button
               variant="ghost"

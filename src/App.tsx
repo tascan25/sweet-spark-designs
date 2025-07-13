@@ -11,6 +11,8 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
+import LikedSection from "./pages/Liked";
+import Cart from "./pages/Cart";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
               <Route path="/products" element={<Products />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/liked" element={<LikedSection/>}/>
+              <Route path="/cart" element={<Cart/>}/>
             </Routes>
           </AnimatePresence>
         </div>
