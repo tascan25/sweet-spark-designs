@@ -159,9 +159,10 @@ function handleCart(){
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-saffron-500 text-saffron-600 hover:bg-saffron-50 rounded-full px-4"
+                          className="border-saffron-500 text-saffron-600 hover:bg-saffron-50 rounded-full px-4 md:hidden"
+                        onClick={handleLikeProductToggle}
                         >
-                          View
+                           {likedProduct?"Remove":"Whishlist"}
                         </Button>
                       </div>
                     </div>
