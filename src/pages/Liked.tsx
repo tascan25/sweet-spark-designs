@@ -17,7 +17,7 @@ const Products = () => {
             className="min-h-screen pt-20"
         >
             {/* Hero Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 to-saffron-50">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 via-amber-50 to-amber-200">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
@@ -40,8 +40,12 @@ const Products = () => {
             </section>
 
             {/* Products Section */}
-            {likedProducts.length===0?<span className="text-gradient text-xl font-semibold aligne-align-self-center">Opps!, you haven't like anything yet</span>:
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            {likedProducts.length===0?
+            <div className="w-full h-full flex flex-row justify-center items-center mt-40">
+                 <span className="text-gradient text-xl font-semibold text-center">Opps!, you haven't like anything yet</span>
+            </div>:
+           
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 via-amber-50 to-amber-100">
                 <div className="max-w-7xl mx-auto">
                     {/* Category Filter */}
 

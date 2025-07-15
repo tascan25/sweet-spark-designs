@@ -7,7 +7,7 @@ function CartList({ image, price, id, name, quantity }) {
   const { handleDeleteFromCart } = useContext(WholeAppContext);
 
   return (
-    <li className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-xl bg-[#fff9f0] shadow-md space-y-4 sm:space-y-0 sm:space-x-6">
+    <li className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-xl bg-gradient-to-br from-cream-50 via-amber-50 to-amber-100 shadow-md space-y-4 sm:space-y-0 sm:space-x-6">
       {/* Left: Image & Info */}
       <div className="flex items-center gap-4 w-full sm:w-auto">
         <div className="items-center justify-center flex flex-row flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg border border-gray-200 overflow-hidden">
@@ -30,10 +30,10 @@ function CartList({ image, price, id, name, quantity }) {
         </span>
         <Button
           variant="destructive"
-          className="p-2 rounded-full hover:bg-red-600 transition ml-4 flex-shrink-0"
+          className="p-2 rounded-full transition ml-4 hover:animate-bounce"
           onClick={() => handleDeleteFromCart(id)}
         >
-          <MdDelete className="text-white" size={20} />
+          <MdDelete className="text-white" size={40} />
         </Button>
       </div>
     </li>

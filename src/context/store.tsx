@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useState, useEffect } from "react";
+import { Bounce,toast } from "react-toastify";
 
 export const WholeAppContext = createContext({});
 
@@ -77,6 +78,17 @@ function WholeAppContextProvider({ children }) {
                 return [...prevCart, { ...cartItem, quantity: 1 }];
             }
         });
+           toast.success('Item has been successfuly added to the cart', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
     };
 
     const handleDeleteFromCart = (id) => {
@@ -102,6 +114,17 @@ function WholeAppContextProvider({ children }) {
                 // If quantity is 1, remove the item
                 return prevCart.filter(item => item.id !== id);
             }
+        });
+           toast.success('Item has been successfuly deleted from cart', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
         });
     };
 

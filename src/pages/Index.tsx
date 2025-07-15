@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
+import { ToastContainer } from "react-toastify";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen"
     >
+      <ToastContainer stacked={true} draggable={true}/>
       <Hero />
       <FeaturedProducts />
       <Stats />

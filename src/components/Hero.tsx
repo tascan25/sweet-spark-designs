@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream-50 via-cream-100 to-saffron-50">
+      <div className="absolute inset-0 bg-gradient-to-br from-cream-50 via-amber-100 to-amber-300">
         <motion.div
           className="absolute inset-0 opacity-30"
           style={{
@@ -76,8 +76,8 @@ const Hero = () => {
           </motion.div>
           
           <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6">
-            <span className="text-gradient">Mithai</span>{" "}
-            <span className="text-gray-800">Magic</span>
+            <span className="text-gradient">Kelava</span>{" "}
+            <span className="text-gray-800">Sweets</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

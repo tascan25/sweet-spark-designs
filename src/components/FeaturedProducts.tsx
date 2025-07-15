@@ -75,7 +75,7 @@ const FeaturedProducts = () => {
   };
 
   return (
-    <section id="feature_product" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="feature_product" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 via-amber-50 to-amber-200">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
