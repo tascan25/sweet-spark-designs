@@ -76,7 +76,7 @@ const Hero = () => {
           </motion.div>
           
           <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6">
-            <span className="text-gradient">Kelava</span>{" "}
+            <span className="text-gradient">Moti</span>{" "}
             <span className="text-gray-800">Sweets</span>
           </h1>
           

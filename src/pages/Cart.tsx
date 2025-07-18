@@ -9,6 +9,7 @@ import html2canvas from 'html2canvas'
 import emailjs from 'emailjs-com'
 import { Bounce, toast } from 'react-toastify'
 import { ToastContainer } from 'react-toastify'
+import EmptyCart from '@/components/EmptyCart'
 
 function Cart() {
     const { cart, totalPrice } = useContext(WholeAppContext)
@@ -87,6 +88,7 @@ function Cart() {
                         {cart.length === 0 ? (
                             <div className='w-full h-full flex flex-row justify-center items-center mt-40'>
                                 <span className="text-gradient text-xl font-semibold text-center">Your cart is empty, Add some sweets...</span>
+                                {/* <EmptyCart/> */}
                             </div>
                         ) : (
                             <>
@@ -109,7 +111,8 @@ function Cart() {
                                     </div>
 
                                     <Button
-                                        className="px-4 py-2 md:px-2 md:py-1 w-[25%] md:w-[15%] bg-saffron-500 hover:bg-saffron-600 text-white text-lg rounded-lg mt-5 shadow-sm shadow-black"
+                                        className="px-4 py-2 md:px-2 md:py-1 w-[25%] md:w-[15%] bg-red-200 hover:bg-red-300 text-white text-lg rounded-lg mt-5 shadow-sm shadow-black
+                                        transition-all ease-in-out duration-500"
                                         size="sm"
                                         onClick={handleCheckOut}
                                     >

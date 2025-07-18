@@ -59,9 +59,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-poppins font-bold text-gradient"
+              className="flex flex-row justify-center items-center gap-4"
             >
-              Kelava Sweets
+               <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md"/>
+              <span className="text-2xl font-poppins font-bold text-gradient">Moti Sweets</span>
+             
             </motion.div>
           </Link>
 
