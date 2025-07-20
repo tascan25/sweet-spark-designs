@@ -66,13 +66,12 @@ function handleCart(){
                   <CardContent className="p-0">
                     {/* Product Image Area */}
                     <div className="relative h-48 bg-gradient-to-br from-cream-100 to-cream-200 flex items-center justify-center overflow-hidden">
-                      <motion.div
+                      <motion.img
+                      src={image}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ duration: 0.3 }}
                         className="text-6xl"
-                      >
-                        {image}
-                      </motion.div>
+                      />
                       
                       {/* Badges */}
                       <div className="absolute top-4 left-4 flex flex-col gap-2">

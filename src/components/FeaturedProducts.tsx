@@ -1,9 +1,12 @@
 
 import { motion } from "framer-motion";
-import FeaturedProductCard from "./ui/FeaturedProductCard";
 import ProductsCard from "./ui/ProductsCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import kajuBasketBurji from "@/assets/sweets/kaju_basket_burji.JPG";
+import kajuFruitTray from "@/assets/sweets/kaju_fruit_tray.JPG";
+import rasmmalaicake from '@/assets/cake/ras_malai_cake.JPG';
+import beetrootcheetos from "@/assets/packed/beetrootcheetos.JPG";
 
 const FeaturedProducts = () => {
 
@@ -13,23 +16,23 @@ const FeaturedProducts = () => {
       name: "Kaju Katli",
       description: "Premium cashew fudge with silver leaf",
       price: 450,
-      originalPrice: "₹500/kg",
       rating: 4.9,
       reviews: 234,
-      image: "🥜",
+      image: kajuBasketBurji,
       category: "premium",
       badges: ["Bestseller", "Premium"]
     },
     {
       id: 2,
-      name: "Gulab Jamun",
-      description: "Soft milk dumplings in rose syrup",
-      price: 320,
+      name: "Ras Malai Cake",
+      description: "Soft paneer dumplings in sweetened milk",
+      price: 420,
       rating: 4.8,
-      reviews: 189,
-      image: "🍯",
-      category: "traditional",
-      badges: ["Traditional"]
+      reviews: 176,
+      image: rasmmalaicake,
+      category: "cake",
+      badges: ["Premium"],
+      quantity: 0
     },
     {
       id: 3,
@@ -38,20 +41,21 @@ const FeaturedProducts = () => {
       price: 280,
       rating: 4.7,
       reviews: 156,
-      image: "🤍",
+      image: kajuFruitTray,
       category: "traditional",
       badges: ["Popular"]
     },
     {
       id: 4,
-      name: "Soan Papdi",
-      description: "Flaky, crispy layers with nuts",
-      price: 380,
-      rating: 4.6,
-      reviews: 143,
-      image: "🧈",
-      category: "festival",
-      badges: ["Festival Special"]
+      name: "Beetroot Cheetos",
+      description: "Soft paneer dumplings in sweetened milk",
+      price: 420,
+      rating: 4.8,
+      reviews: 176,
+      image: beetrootcheetos,
+      category: "packed",
+      badges: ["Premium"],
+      quantity: 0
     },
   ];
 
