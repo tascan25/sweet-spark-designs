@@ -139,22 +139,22 @@ function ProductsCard({
               {isExpanded ? 'Read less' : 'Read more'}
             </Button>
 
-            <div className="flex items-center justify-between mb-4">
+            {/* <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
                 <span className="text-2xl font-bold text-saffron-600">₹ {price} /kg</span>
               </div>
               <span className="text-xs text-gray-500">{reviews} reviews</span>
-            </div>
+            </div> */}
 
             <div className="flex gap-2">
-              <Button
+              {/* <Button
                 className="flex-1 bg-saffron-500 hover:bg-saffron-600 text-white rounded-full"
                 size="sm"
                 onClick={handleCart}
               >
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Add to Cart
-              </Button>
+              </Button> */}
               <Button
                 variant="outline"
                 size="sm"

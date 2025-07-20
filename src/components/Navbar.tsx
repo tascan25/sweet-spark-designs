@@ -50,7 +50,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ?   "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg" 
-          : "bg-gradient-to-br from-cream-50 via-amber-50 to-amber-100 backdrop-blur-md shadow-lg"
+          : "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ const Navbar = () => {
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
                     ? "text-saffron-500"
-                    : "text-gray-700 hover:text-saffron-500"
+                    : "text-gray-400 hover:text-saffron-500"
                 }`}
               >
                 {item.name}
@@ -92,26 +92,26 @@ const Navbar = () => {
             ))}
             
             {/* CART BUTTON  */}
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               className="p-2 relative"
             >
               <Link to={"/cart"}>{cartCount===0?<IoCartOutline/>:<FaShoppingCart/>}</Link>
               <span className="absolute bottom-5 right-0 text-gradient">{cartCount}</span>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-           <Button
+           {/* <Button
               variant="ghost"
               size="sm"
               className="p-2 relative"
             >
               <Link to={"/cart"}>{cartCount===0?<IoCartOutline color="black"/>:<FaShoppingCart/>}</Link>
               <span className="absolute bottom-5 right-0 text-gradient">{cartCount}</span>
-            </Button>
+            </Button> */}
             <Button
               variant="ghost"
               size="sm"
