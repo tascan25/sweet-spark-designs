@@ -1,35 +1,46 @@
 
 import { motion } from "framer-motion";
-import { Clock, Heart, Award, Users } from "lucide-react";
+import { Heart, Star, Award, Users, Clock } from "lucide-react";
+
 
 const About = () => {
   const timeline = [
-    {
-      year: "1998",
-      title: "The Beginning",
-      description: "Started as a small family business with traditional recipes passed down through generations.",
-      icon: Heart
-    },
-    {
-      year: "2005",
-      title: "First Store",
-      description: "Opened our first physical store in Mumbai, serving the local community with authentic sweets.",
-      icon: Award
-    },
-    {
-      year: "2015",
-      title: "Going Digital",
-      description: "Launched our online platform to bring traditional Indian sweets to customers across India.",
-      icon: Users
-    },
-    {
-      year: "2023",
-      title: "Modern Innovation",
-      description: "Combining traditional recipes with modern packaging and delivery for the digital age.",
-      icon: Clock
-    }
-  ];
-
+  {
+    year: "1962",
+    title: "Sweet Origins",
+    description:
+      "MOTI SWEETS is born in Malviya Nagar—our family’s very first step in a journey of handcrafted mithai. Four generations later, those original recipes still form the heart of everything we do.",
+    icon: Heart,
+  },
+  {
+    year: "1998",
+    title: "Next‑Gen Leadership",
+    description:
+      "The fourth generation officially takes the reins, expanding our range to 310+ traditional recipes and setting the stage for future growth.",
+    icon: Star,
+  },
+  {
+    year: "2005",
+    title: "Flagship Store",
+    description:
+      "Opened our first boutique outlet in Malviya Nagar. Word spread fast as the community fell in love with our authentic sweets and warm, personal service.",
+    icon: Award,
+  },
+  {
+    year: "2015",
+    title: "Digital Sweet Experience",
+    description:
+      "Launched our e‑commerce platform—now anyone, anywhere in India can order fresh, handcrafted mithai with just a few clicks.",
+    icon: Users,
+  },
+  {
+    year: "2023",
+    title: "Modern Innovation",
+    description:
+      "Celebrating 60+ years of tradition by blending time‑honored recipes with sleek new packaging and ultra‑fast delivery for today’s digitally‑savvy sweet‑lovers.",
+    icon: Clock,
+  },
+];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -55,7 +66,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-600 leading-relaxed"
           >
-            For over two decades, we've been crafting authentic Indian sweets with the same passion 
+            For over three decades, we've been crafting authentic Indian sweets with the same passion 
             and traditional recipes that started our journey. Every sweet tells a story of heritage, 
             quality, and the love that goes into making each piece perfect.
           </motion.p>

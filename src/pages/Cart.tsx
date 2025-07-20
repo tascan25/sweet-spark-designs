@@ -174,7 +174,7 @@ function Cart() {
                                 margin: '0 0 8px 0',
                                 color: '#1f2937'
                             }}>
-                                Kelava Sweets
+                                Moti Sweets
                             </h2>
                             <div style={{ fontSize: '12px', color: '#6b7280', lineHeight: '1.5' }}>
                                 1234 Main St.<br />

@@ -29,7 +29,7 @@ export const products = [
     {
       id: 1,
       name: "Kaju Basket Burji",
-      description: "Premium cashew fudge with silver leaf",
+      description: "A Royal Treat in Every Crunch! Handcrafted cashew baskets overflowing with our signature bhurji blend—nutty, melt‑in‑the‑mouth luxury perfect for festive feasts or premium gifting. Only at Moti Sweets.",
       price: 450,
       rating: 4.9,
       reviews: 234,
@@ -41,7 +41,7 @@ export const products = [
     {
       id: 2,
       name: "Kaju Basket",
-      description: "Soft milk dumplings in rose syrup",
+      description: "A Bite‑Sized Royal Delight! Handcrafted cashew baskets brimming with rich, flavorful stuffing—a perfect fusion of artistry and tradition in every melt‑in‑the‑mouth bite. Ideal for celebrations, gifting, or a personal treat—only at Moti Sweets.",
       price: 320,
       rating: 4.8,
       reviews: 189,
@@ -53,7 +53,7 @@ export const products = [
     {
       id: 3,
       name: "Kaju Fruit Tray",
-      description: "Spongy cottage cheese balls in sugar syrup",
+      description: "A Fruity Twist to Royal Indulgence! Finest cashews sculpted into vibrant fruit shapes, each infused with delicate flavors and artfully arranged in a luxurious tray. A colorful, elegant delight—perfect for festive gifting or special celebrations. Only at Moti Sweets—where tradition meets creative sweetness.",
       price: 280,
       rating: 4.7,
       reviews: 156,
@@ -65,7 +65,7 @@ export const products = [
     {
       id: 4,
       name: "Kaju Strawberry",
-      description: "Flaky, crispy layers with nuts",
+      description: "A Berry Delight with a Nutty Twist! Premium cashew bites kissed with sweet strawberry essence, artfully arranged in an elegant tray. Tradition meets innovation in every melt‑in‑the‑mouth morsel—ideal for gifting or celebrating moments of joy. Only at Moti Sweets.",
       price: 380,
       rating: 4.6,
       reviews: 143,
@@ -77,7 +77,7 @@ export const products = [
     {
       id: 5,
       name: "4 Line Fancy Box",
-      description: "Tiny gram flour pearls formed into sweet balls",
+      description: "Indulge in sweetness, wrapped in elegance! Our Premium Sweet Box by Moti Sweets brings tradition to every celebration. Beautifully packaged, lovingly curated, and fully customizable—create a gift that delights long after the last bite.",
       price: 350,
       rating: 4.8,
       reviews: 198,
@@ -89,7 +89,7 @@ export const products = [
     {
       id: 6,
       name: "Desi Ghee SpeciaL Bhaji Box",
-      description: "Rich almond pudding with cardamom",
+      description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
       price: 520,
       rating: 4.9,
       reviews: 167,
@@ -101,7 +101,7 @@ export const products = [
      {
       id: 7,
       name: "Heart Petha",
-      description: "Premium cashew fudge with silver leaf",
+      description: "Melt hearts with our Heart Petha — artisan heart‑shaped petha slow‑cooked to translucent perfection in fragrant sugar syrup, then kissed with rose or kewra essence. Soft, juicy, and pure, it’s the sweetest way to say “I love you” — only at Moti Sweets.",
       price: 450,
       rating: 4.9,
       reviews: 234,
@@ -137,7 +137,7 @@ export const products = [
           {
         id: 10,
         name: "Ras Malai Cake",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "Experience the ultimate fusion dessert with our Ras Malai Cake: a light, saffron‑soaked sponge layered in velvety cream, studded with juicy ras malai pieces, and finished with crushed pistachios, delicate rose petals, and a whisper of cardamom. Celebration‑ready and utterly irresistible—only at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -148,8 +148,8 @@ export const products = [
       },
           {
         id: 11,
-        name: "Kaju Burji Cake",
-        description: "Soft paneer dumplings in sweetened milk",
+        name: "Kaju Burfi Cake",
+        description: "Elevate every celebration with our Kaju Burfi Cake — velvety cashew layers bound in pure desi ghee, crowned with silver varq, saffron strands, and crunchy dry fruits. A luxurious mithai masterpiece, exclusively at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -161,7 +161,7 @@ export const products = [
       {
         id: 13,
         name: "Beetroot Cheetos",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "Bold, Crunchy & Naturally Colorful!,The Smarter Way to Snack! Crunch into vibrant flavor with our Beetroot Chips — real beetroot slices oven‑baked to a satisfying crisp, lightly seasoned for a burst of natural taste. Nutrient‑rich, guilt‑free, and perfect for kids and grown‑ups alike—only at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -173,7 +173,7 @@ export const products = [
       {
         id: 14,
         name: "Broccoli Chips",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "Snack smarter with our Broccoli Chips — real broccoli florets, lightly seasoned and oven‑baked to crispy perfection. Guilt‑free, fiber‑rich, and bursting with savory crunch, it’s the veggie snack you’ll actually crave—only at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -185,7 +185,7 @@ export const products = [
       {
         id: 15,
         name: "Quinoa Sticks",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "Crunchy Bites of Healthy Goodness! Protein‑packed quinoa, baked to light, irresistible crisps—our Quinoa Sticks deliver guilt‑free munching with every crunch. Wholesome, flavorful, and perfect anytime—only at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -197,7 +197,7 @@ export const products = [
       {
         id: 16,
         name: "Sorghum Chips",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "The Smarter Way to Snack!, Crunch into wellness with our Sorghum Chips — wholesome jowar kernels baked into a light, gluten‑free crunch that’s as nutritious as it is delicious. Mindful snacking, modern taste—only at Moti Sweets.",
         price: 420,
         rating: 4.8,
         reviews: 176,
@@ -209,7 +209,7 @@ export const products = [
         {
         id: 17,
         name: "Pack of 4",
-        description: "Soft paneer dumplings in sweetened milk",
+        description: "Pack of 4 – The Ultimate Healthy Snack Medley, Elevate your munching with our curated snack quartet: protein‑packed Quinoa Sticks, bold and naturally colorful Beetroot Cheetos, light gluten‑free Sorghum Chips, and guilt‑free Broccoli Chips. Four irresistible crunches in one premium pack—perfect for sharing, gifting, or treating yourself to a wholesome, flavor‑packed snack adventure.",
         price: 420,
         rating: 4.8,
         reviews: 176,

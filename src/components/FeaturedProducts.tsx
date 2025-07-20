@@ -11,21 +11,22 @@ import beetrootcheetos from "@/assets/packed/beetrootcheetos.JPG";
 const FeaturedProducts = () => {
 
   const products = [
-    {
-      id: 1,
-      name: "Kaju Katli",
-      description: "Premium cashew fudge with silver leaf",
-      price: 450,
-      rating: 4.9,
-      reviews: 234,
-      image: kajuBasketBurji,
-      category: "premium",
-      badges: ["Bestseller", "Premium"]
-    },
+  {
+        id: 1,
+        name: "Kaju Basket Burji",
+        description: "A Royal Treat in Every Crunch! Handcrafted cashew baskets overflowing with our signature bhurji blend—nutty, melt‑in‑the‑mouth luxury perfect for festive feasts or premium gifting. Only at Moti Sweets.",
+        price: 450,
+        rating: 4.9,
+        reviews: 234,
+        image: kajuBasketBurji,
+        category: "sweets",
+        badges: ["Bestseller", "Premium"],
+        quantity:0
+      },
     {
       id: 2,
       name: "Ras Malai Cake",
-      description: "Soft paneer dumplings in sweetened milk",
+      description: "Experience the ultimate fusion dessert with our Ras Malai Cake: a light, saffron‑soaked sponge layered in velvety cream, studded with juicy ras malai pieces, and finished with crushed pistachios, delicate rose petals, and a whisper of cardamom. Celebration‑ready and utterly irresistible—only at Moti Sweets.",
       price: 420,
       rating: 4.8,
       reviews: 176,
@@ -34,21 +35,22 @@ const FeaturedProducts = () => {
       badges: ["Premium"],
       quantity: 0
     },
-    {
-      id: 3,
-      name: "Rasgulla",
-      description: "Spongy cottage cheese balls in sugar syrup",
-      price: 280,
-      rating: 4.7,
-      reviews: 156,
-      image: kajuFruitTray,
-      category: "traditional",
-      badges: ["Popular"]
-    },
+   {
+        id: 3,
+        name: "Kaju Fruit Tray",
+        description: "A Fruity Twist to Royal Indulgence! Finest cashews sculpted into vibrant fruit shapes, each infused with delicate flavors and artfully arranged in a luxurious tray. A colorful, elegant delight—perfect for festive gifting or special celebrations. Only at Moti Sweets—where tradition meets creative sweetness.",
+        price: 280,
+        rating: 4.7,
+        reviews: 156,
+        image: kajuFruitTray,
+        category: "sweets",
+        badges: ["Popular"],
+        quantity:0
+      },
     {
       id: 4,
       name: "Beetroot Cheetos",
-      description: "Soft paneer dumplings in sweetened milk",
+        description: "Bold, Crunchy & Naturally Colorful!,The Smarter Way to Snack! Crunch into vibrant flavor with our Beetroot Chips — real beetroot slices oven‑baked to a satisfying crisp, lightly seasoned for a burst of natural taste. Nutrient‑rich, guilt‑free, and perfect for kids and grown‑ups alike—only at Moti Sweets.",
       price: 420,
       rating: 4.8,
       reviews: 176,
