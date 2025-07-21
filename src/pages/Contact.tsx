@@ -1,11 +1,10 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, Users, HeartHandshake, Star } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -83,26 +82,151 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen pt-20"
     >
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 via-amber-50 to-amber-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
+      {/* Enhanced Hero Section */}
+      <section className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-indigo-400/10 to-purple-400/5"></div>
+          
+          {/* Floating Contact Elements */}
+          <motion.div
+            animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-blue-200 to-indigo-300 rounded-2xl opacity-20 flex items-center justify-center"
+          >
+            <MessageSquare className="w-8 h-8 text-blue-600" />
+          </motion.div>
+          
+          <motion.div
+            animate={{ y: [0, 15, 0], rotate: [0, -8, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-40 right-20 w-12 h-12 bg-gradient-to-br from-indigo-200 to-purple-300 rounded-full opacity-25"
+          />
+          
+          <motion.div
+            animate={{ x: [0, 10, 0], y: [0, -5, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-purple-200 to-pink-300 rounded-full opacity-20 flex items-center justify-center"
+          >
+            <HeartHandshake className="w-10 h-10 text-purple-600" />
+          </motion.div>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto text-center">
+          {/* Trust Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-full shadow-lg">
+              <Star className="w-4 h-4 mr-2" />
+              <span className="text-sm font-medium">Trusted by 10,000+ Happy Customers</span>
+            </div>
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-poppins font-bold mb-6"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-8"
           >
-            Get in <span className="text-gradient">Touch</span>
-          </motion.h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+              <span className="text-gray-800">Let's</span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Connect
+              </span>
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full"></div>
+          </motion.div>
+
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-600 leading-relaxed"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12"
           >
-            We'd love to hear from you! Whether you have questions about our sweets, 
-            need help with an order, or want to share feedback, we're here to help.
+            Your sweet journey starts with a conversation. 
+            <span className="text-indigo-600 font-medium"> We're here to make every interaction as delightful as our sweets.</span>
           </motion.p>
+
+          {/* Contact Methods Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-5xl mx-auto"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-blue-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Phone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Call</h3>
+              <p className="text-sm text-gray-600">Instant support & order assistance</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-indigo-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <MessageSquare className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Send Message</h3>
+              <p className="text-sm text-gray-600">Detailed inquiries & custom orders</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Visit Store</h3>
+              <p className="text-sm text-gray-600">Experience our sweets in person</p>
+            </motion.div>
+          </motion.div>
+
+          {/* Statistics */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-wrap justify-center items-center gap-8 text-center"
+          >
+            <div className="flex items-center space-x-2">
+              <Users className="w-5 h-5 text-indigo-600" />
+              <span className="text-2xl font-bold text-gray-800">24/7</span>
+              <span className="text-gray-600">Support</span>
+            </div>
+            <div className="w-px h-8 bg-gray-300"></div>
+            <div className="flex items-center space-x-2">
+              <HeartHandshake className="w-5 h-5 text-indigo-600" />
+              <span className="text-2xl font-bold text-gray-800">99%</span>
+              <span className="text-gray-600">Satisfaction</span>
+            </div>
+            <div className="w-px h-8 bg-gray-300"></div>
+            <div className="flex items-center space-x-2">
+              <MessageSquare className="w-5 h-5 text-indigo-600" />
+              <span className="text-2xl font-bold text-gray-800">&lt;2hr</span>
+              <span className="text-gray-600">Response</span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Wave */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-cream-50"></path>
+          </svg>
         </div>
       </section>
 
