@@ -23,7 +23,7 @@ const Products = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl md:text-6xl font-poppins font-bold mb-6"
+                        className="text-5xl md:text-6xl font-lobster font-bold mb-6"
                     >
                         Your <span className="text-gradient">Liked </span> Collection
                     </motion.h1>

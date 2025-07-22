@@ -90,7 +90,9 @@ export default {
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
-				'poppins': ['Poppins', 'sans-serif']
+				'poppins': ['Poppins', 'sans-serif'],
+				'open-sans':[ "Open Sans", 'sans-serif'],
+				'lobster':["Lobster", 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

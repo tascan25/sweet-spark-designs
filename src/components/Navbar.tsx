@@ -62,7 +62,7 @@ const Navbar = () => {
               className="flex flex-row justify-center items-center gap-4"
             >
                <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md"/>
-              <span className="text-2xl font-poppins font-bold text-gradient">Moti Sweets</span>
+              <span className="text-3xl font-lobster font-bold text-gradient">Moti Sweets</span>
              
             </motion.div>
           </Link>

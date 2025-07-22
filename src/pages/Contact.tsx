@@ -134,9 +134,9 @@ const Contact = () => {
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              <span className="text-gray-800">Let's</span>
+              <span className="text-gray-800 font-lobster">Let's</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent font-lobster">
                 Connect
               </span>
             </h1>

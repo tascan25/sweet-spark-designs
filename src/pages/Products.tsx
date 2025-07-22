@@ -63,13 +63,13 @@ const Products = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight">
-              <span className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+            <div className="font-bold mb-4 leading-tight flex flex-col ">
+              <span className=" text-3xl md:text-8xl lg:text-9xl font-lobster bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
                 Authentic
               </span>
               <br />
-              <span className="text-gray-800">Indian Sweets</span>
-            </h1>
+              <span className="text-gray-800 text-xl md:text-4xl lg:text-6xl mt-0 font-lobster">Indian Sweets</span>
+            </div>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full"></div>
           </motion.div>
 

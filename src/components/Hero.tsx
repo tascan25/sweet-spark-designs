@@ -76,9 +76,9 @@ const Hero = () => {
             <Sparkles className="w-12 h-12 text-orange-400" />
           </motion.div>
 
-          <h1 className="text-3xl md:text-7xl font-poppins font-bold mb-6">
-            <span className="text-gradient">Moti</span>{" "}
-            <span className="text-gray-100">Sweets</span>
+          <h1 className="text-3xl md:text-7xl font-semibold mb-6">
+            <span className="text-gradient font-lobster">Moti</span>{" "}
+            <span className="text-gray-100 font-lobster">Sweets</span>
           </h1>
 
           <p className="text-sm md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
