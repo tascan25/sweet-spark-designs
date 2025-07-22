@@ -51,13 +51,13 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Our Store",
-      details: ["123 Sweet Street", "Mumbai, Maharashtra 400001", "India"],
+      details: ["17 Main Market,", "Malviya Nagar, New Delhi, Delhi 110017", "India"],
       color: "text-blue-500"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 98765 43210", "+91 87654 32109", "Mon-Sat: 9AM-8PM"],
+      details: ["+91 9310000073", "Mon-Sat: 8AM-11PM"],
       color: "text-green-500"
     },
     {
@@ -69,7 +69,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Monday - Saturday: 9AM - 8PM", "Sunday: 10AM - 6PM", "Festivals: Extended hours"],
+      details: ["Monday - Sunday: 8AM - 11PM", "Sunday: 9AM - 12PM", "Festivals: Extended hours"],
       color: "text-rose-500"
     }
   ];
@@ -421,8 +421,8 @@ const Contact = () => {
                         Visit Our Store
                       </h3>
                       <p className="text-gray-600 mb-4">
-                        123 Sweet Street, Mumbai<br />
-                        Maharashtra, India 400001
+                        17 Main Market, Malviya Nagar<br />
+                        New Delhi, Delhi 110017
                       </p>
                       <Button
                         variant="outline"

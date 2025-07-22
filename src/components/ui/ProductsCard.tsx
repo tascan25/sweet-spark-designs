@@ -1,13 +1,9 @@
-import React, { useState, useContext } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Star, ShoppingCart } from 'lucide-react';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import React, { useState,useContext } from 'react';
+import { Star, ShoppingCart, Eye, Heart } from 'lucide-react';
 import { WholeAppContext } from '@/context/store';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
-function ProductsCard({
+export default function ProductsCard({
   id,
   image,
   badges,
@@ -18,19 +14,18 @@ function ProductsCard({
   description,
   reviews,
   index,
-  quantity,
+  quantity
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   const {
     likedProducts,
     handleSetLikedProduct,
     handleDeleteLikedProduct,
-    handleCartCount,
-    handleAddToCart,
-    handleDeleteFromCart,
   } = useContext(WholeAppContext);
 
-  const likedProduct = likedProducts.some((item) => item.id === id);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const likedProduct = likedProducts.some((product)=>product.id===id);
 
   const handleLikeProductToggle = () => {
     const likedItem = { id, image, badges, originalPrice, price, name, rating, description, reviews, index };
@@ -40,135 +35,140 @@ function ProductsCard({
       handleDeleteLikedProduct(id);
     }
   };
-
-  const handleCart = () => {
-    handleCartCount();
-    const cartItem = { image, price, id, name, quantity };
-    handleAddToCart(cartItem);
-  };
-
-  const toggleDescription = () => {
-    setIsExpanded((prev) => !prev);
-  };
+  const toggleDescription = () => setIsExpanded(!isExpanded);
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
-      whileHover={{ y: -8 }}
-      className="group"
+    <div
+      className="group relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <Card className="overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-cream-50">
-        <CardContent className="p-0">
-          {/* Product Image Area */}
-          <div className="relative h-48 bg-gradient-to-br from-cream-100 to-cream-200 flex items-center justify-center overflow-hidden">
-            <motion.img
-              src={image}
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-              className="text-6xl"
-            />
+      {/* Floating background glow */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-700"></div>
 
-            {/* Badges */}
-            <div className="absolute top-4 left-4 flex flex-col gap-2">
-              {badges.map((badge, i) => (
-                <Badge
-                  key={i}
-                  className={`bg-gradient-to-r ${
-                    badge === 'Bestseller'
-                      ? 'from-yellow-400 to-yellow-600'
-                      : badge === 'Premium'
-                      ? 'from-purple-400 to-purple-600'
-                      : badge === 'Festival Special'
-                      ? 'from-orange-400 to-orange-600'
-                      : badge === 'Limited'
-                      ? 'from-red-400 to-red-600'
-                      : 'from-blue-400 to-blue-600'
-                  } text-white border-0`}
-                >
-                  {badge}
-                </Badge>
-              ))}
+      <div className={`relative bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all duration-500 ${isHovered ? 'scale-105 shadow-2xl' : 'shadow-lg'
+        }`}>
+
+        {/* Product Image Area - Enhanced for visual appeal */}
+        <div className="relative h-64 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 flex items-center justify-center overflow-hidden">
+          {/* Multi-layered background effects */}
+          <div className="absolute inset-0">
+            {/* Radial gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-radial from-yellow-200/30 via-orange-200/20 to-transparent"></div>
+
+            {/* Animated floating elements */}
+            <div className="absolute inset-0 opacity-40">
+              <div className="absolute top-8 left-12 w-3 h-3 bg-yellow-300 rounded-full animate-pulse shadow-lg"></div>
+              <div className="absolute top-16 right-16 w-2 h-2 bg-orange-300 rounded-full animate-ping shadow-md"></div>
+              <div className="absolute bottom-12 left-8 w-2.5 h-2.5 bg-amber-300 rounded-full animate-bounce shadow-md"></div>
+              <div className="absolute top-20 left-1/3 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse delay-500"></div>
+              <div className="absolute bottom-20 right-8 w-1 h-1 bg-yellow-400 rounded-full animate-ping delay-700"></div>
             </div>
 
-            {/* Hover Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              className="absolute inset-0 bg-black/20 flex items-center justify-center"
-            >
-              <Button
-                size="sm"
-                className="bg-white text-gray-800 hover:bg-gray-100 rounded-full shadow-lg"
-                onClick={handleLikeProductToggle}
-              >
-                {likedProduct ? <FaHeart color="red" /> : <FaRegHeart />}
-              </Button>
-            </motion.div>
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: `radial-gradient(circle at 20px 20px, #f59e0b 2px, transparent 2px)`,
+              backgroundSize: '40px 40px'
+            }}></div>
           </div>
 
-          {/* Product Info */}
-          <div className="p-6">
-            <div className="flex items-start justify-between mb-2">
-              <h3 className="text-xl font-poppins font-semibold text-gray-800 leading-tight">
-                {name}
-              </h3>
-              <div className="flex items-center space-x-1 ml-2">
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <span className="text-sm text-gray-600">{rating}</span>
-              </div>
+          {/* Enhanced product image with multiple effects */}
+          <div className="relative z-10 w-full h-full flex items-center justify-center overflow-hidden">
+            {/* Glow effect behind image */}
+            <div className={`absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full blur-xl opacity-0 transition-all duration-700 ${isHovered ? 'opacity-30 scale-150' : 'opacity-0 scale-100'
+              }`}>
+              
             </div>
 
-            {/* Description with toggle */}
-            <p
-              className={`text-gray-600 text-sm mb-2 leading-relaxed ${
-                !isExpanded ? 'line-clamp-2' : ''
-              }`}
+            {/* Main image container with overflow hidden */}
+            <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+              <img
+                src={image}
+                alt="product image"
+                className={`w-full h-full object-cover transform transition-all duration-700 filter ${isHovered
+                    ? 'scale-110 rotate-12 drop-shadow-2xl'
+                    : 'scale-100 rotate-0 drop-shadow-lg'
+                  }`}
+              />
+            </div>
+          </div>
+
+          {/* Enhanced Badges */}
+          <div className="absolute top-4 left-4 flex flex-col gap-2 z-20">
+            {badges.map((badge, i) => (
+              <div
+                key={i}
+                className={`px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg transform transition-all duration-300 ${badge === 'Bestseller'
+                    ? 'bg-gradient-to-r from-yellow-500 to-amber-600 animate-pulse'
+                    : badge === 'Premium'
+                      ? 'bg-gradient-to-r from-purple-500 to-indigo-600'
+                      : badge === 'Festival Special'
+                        ? 'bg-gradient-to-r from-orange-500 to-red-600'
+                        : badge === 'Limited'
+                          ? 'bg-gradient-to-r from-red-500 to-pink-600 animate-bounce'
+                          : 'bg-gradient-to-r from-blue-500 to-cyan-600'
+                  } hover:scale-110`}
+              >
+                {badge}
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Action Buttons */}
+          <div className={`absolute top-4 right-4 flex flex-col gap-2 z-20 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+            }`}>
+            <button
+              onClick={handleLikeProductToggle}
+              className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-200"
             >
+               {likedProduct ? <FaHeart color="red" /> : <FaRegHeart />}
+            </button>
+            <button className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-200">
+              <Eye className="w-4 h-4 text-gray-600" />
+            </button>
+          </div>
+
+
+        </div>
+
+        {/* Product Info with enhanced styling */}
+        <div className="p-6 bg-gradient-to-b from-white to-gray-50">
+          {/* Header with rating */}
+          <div className="flex items-start justify-between mb-3">
+            <h3 className="text-xl font-bold text-gray-800 leading-tight group-hover:text-orange-600 transition-colors duration-300">
+              {name}
+            </h3>
+            <div className="flex items-center space-x-1 bg-yellow-50 px-2 py-1 rounded-full">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-sm font-semibold text-yellow-700">{rating}</span>
+            </div>
+          </div>
+
+          {/* Enhanced Description */}
+          <div className="mb-4">
+            <p className={`text-gray-600 text-sm leading-relaxed transition-all duration-300 ${!isExpanded ? 'line-clamp-2' : ''
+              }`}>
               {description}
             </p>
-            <Button
-              variant="link"
-              size="sm"
-              className="p-0 mb-4 text-saffron-600 hover:underline"
+            <button
               onClick={toggleDescription}
+              className="text-orange-600 hover:text-orange-700 text-xs font-medium mt-1 hover:underline transition-colors duration-200"
             >
-              {isExpanded ? 'Read less' : 'Read more'}
-            </Button>
-
-            {/* <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-saffron-600">₹ {price} /kg</span>
-              </div>
-              <span className="text-xs text-gray-500">{reviews} reviews</span>
-            </div> */}
-
-            <div className="flex gap-2">
-              {/* <Button
-                className="flex-1 bg-saffron-500 hover:bg-saffron-600 text-white rounded-full"
-                size="sm"
-                onClick={handleCart}
-              >
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Add to Cart
-              </Button> */}
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-saffron-500 text-saffron-600 hover:bg-saffron-50 rounded-full px-4 md:hidden"
-                onClick={handleLikeProductToggle}
-              >
-                {likedProduct ? 'Remove' : 'Wishlist'}
-              </Button>
-            </div>
+              {isExpanded ? '↑ Show less' : '↓ Read more'}
+            </button>
           </div>
-        </CardContent>
-      </Card>
-    </motion.div>
+
+          {/* Reviews only */}
+          <div className="text-center mb-4">
+            <span className="text-sm text-gray-500 bg-blue-50 px-3 py-2 rounded-full font-medium">
+              {reviews} happy customers
+            </span>
+          </div>
+        </div>
+
+        {/* Subtle bottom accent */}
+        <div className="h-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500"></div>
+      </div>
+    </div>
   );
 }
-
-export default ProductsCard;

@@ -143,8 +143,8 @@ const Hero = () => {
             key={i}
             className="absolute flex items-center h-full whitespace-nowrap animate-scroll"
             style={{
-              animationDelay: `${i * 15}s`,
-              animationDuration: "30s",
+              animationDelay: `${i * 5}s`,
+              animationDuration: "10s",
             }}
           >
             <div className="flex items-center space-x-8 text-white font-semibold text-base px-8">
