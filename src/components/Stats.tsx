@@ -10,21 +10,21 @@ const Stats = () => {
   const stats = [
     {
       icon: Users,
-      value: 50000,
+      value: "10000",
       suffix: "+",
       label: "Happy Customers",
       color: "text-saffron-500"
     },
     {
       icon: Award,
-      value: 25,
+      value: 65,
       suffix: "+",
       label: "Years of Excellence",
       color: "text-rose-500"
     },
     {
       icon: Clock,
-      value: 100,
+      value: 300,
       suffix: "+",
       label: "Traditional Recipes",
       color: "text-blue-500"

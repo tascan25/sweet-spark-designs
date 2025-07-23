@@ -190,10 +190,10 @@ const About = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
           >
             {[
-              { number: "60+", label: "Years of Tradition" },
-              { number: "310+", label: "Unique Recipes" },
+              { number: "65+", label: "Years of Tradition" },
+              { number: "300+", label: "Unique Recipes" },
               { number: "4", label: "Generations" },
-              { number: "1000+", label: "Happy Customers" }
+              { number: "10,000+", label: "Happy Customers" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
