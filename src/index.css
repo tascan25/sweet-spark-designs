@@ -9,6 +9,13 @@
   font-family: "Open Sans", sans-serif;;
 }
 
+.moti-text {
+          font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          letter-spacing: 0.05em;
+          transform: skew(-5deg);
+        }
+
 /* Design system with Indian sweets-inspired colors */
 @layer base {
   :root {

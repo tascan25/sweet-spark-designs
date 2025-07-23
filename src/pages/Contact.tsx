@@ -47,30 +47,54 @@ const Contact = () => {
     }, 3000);
   };
 
+  // Click handlers for interactive elements
+  const handleCallClick = () => {
+    window.location.href = "tel:+919310000073";
+  };
+
+  const handleAddressClick = () => {
+    const address = "17 Main Market, Malviya Nagar, New Delhi, Delhi 110017, India";
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+  };
+
+  const handleDirectionsClick = () => {
+    const address = "17 Main Market, Malviya Nagar, New Delhi, Delhi 110017, India";
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+
   const contactInfo = [
     {
       icon: MapPin,
       title: "Visit Our Store",
       details: ["17 Main Market,", "Malviya Nagar, New Delhi, Delhi 110017", "India"],
-      color: "text-blue-500"
+      color: "text-blue-500",
+      onClick: handleAddressClick,
+      clickable: true
     },
     {
       icon: Phone,
       title: "Call Us",
       details: ["+91 9310000073", "Mon-Sat: 8AM-11PM"],
-      color: "text-green-500"
+      color: "text-green-500",
+      onClick: handleCallClick,
+      clickable: true
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["orders@mithaimagic.com", "support@mithaimagic.com", "Response within 24hrs"],
-      color: "text-saffron-500"
+      details: ["Motisweets@yahoo.com", "Response within 24hrs"],
+      color: "text-saffron-500",
+      onClick: () => window.location.href = "mailto:Motisweets@yahoo.com",
+      clickable: true
     },
     {
       icon: Clock,
       title: "Business Hours",
       details: ["Monday - Sunday: 8AM - 11PM", "Sunday: 9AM - 12PM", "Festivals: Extended hours"],
-      color: "text-rose-500"
+      color: "text-rose-500",
+      clickable: false
     }
   ];
 
@@ -163,7 +187,8 @@ const Contact = () => {
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-blue-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-blue-200/50 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onClick={handleCallClick}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="w-6 h-6 text-white" />
@@ -185,7 +210,8 @@ const Contact = () => {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onClick={handleAddressClick}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <MapPin className="w-6 h-6 text-white" />
@@ -246,6 +272,8 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
+                onClick={info.clickable ? info.onClick : undefined}
+                className={info.clickable ? "cursor-pointer" : ""}
               >
                 <Card className="h-full rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-white to-cream-50">
                   <CardContent className="p-8 text-center">
@@ -268,6 +296,12 @@ const Contact = () => {
                         </p>
                       ))}
                     </div>
+
+                    {info.clickable && (
+                      <div className="mt-4 text-xs text-gray-500">
+                        Click to {info.title === "Call Us" ? "call" : info.title === "Visit Our Store" ? "get directions" : "email"}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -303,7 +337,7 @@ const Contact = () => {
                       </p>
                     </motion.div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <motion.div
                           whileFocus={{ scale: 1.02 }}
@@ -399,7 +433,7 @@ const Contact = () => {
                           {isSubmitting ? "Sending..." : "Send Message"}
                         </Button>
                       </motion.div>
-                    </form>
+                      </div>
                   )}
                 </CardContent>
               </Card>
@@ -427,6 +461,7 @@ const Contact = () => {
                       <Button
                         variant="outline"
                         className="border-saffron-500 text-saffron-600 hover:bg-saffron-50 rounded-full"
+                        onClick={handleDirectionsClick}
                       >
                         Get Directions
                       </Button>
