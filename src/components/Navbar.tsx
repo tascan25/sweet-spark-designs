@@ -8,12 +8,13 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { WholeAppContext } from "@/context/store";
 import { IoCartOutline } from "react-icons/io5";
+import compname from "@/assets/compname.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const {cartCount} = useContext(WholeAppContext)
+  const { cartCount } = useContext(WholeAppContext)
   const location = useLocation();
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Products", path: "/products" },
     { name: "Contact", path: "/contact" },
-    {name:"Liked", path:"/liked"}
+    { name: "Liked", path: "/liked" }
 
   ];
 
@@ -47,11 +48,10 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ?   "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg" 
-          : "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg"
+        : "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -61,9 +61,13 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="flex flex-row justify-center items-center gap-4"
             >
-               <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md"/>
-              <span className="text-4xl font-lobster font-bold text-gradient moti-text">Moti Sweets</span>
-             
+              <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md" />
+              <span className="flex flex-row justify-center items-center">
+                <img src={compname} className="w-24 md:w-28" />
+                <span className="text-4xl font-lobster font-bold text-gradient moti-text">Sweets
+                </span>
+              </span>
+
             </motion.div>
           </Link>
 
@@ -73,11 +77,10 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? "text-saffron-500"
-                    : "text-gray-400 hover:text-saffron-500"
-                }`}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${isActive(item.path)
+                  ? "text-saffron-500"
+                  : "text-gray-400 hover:text-saffron-500"
+                  }`}
               >
                 {item.name}
                 {isActive(item.path) && (
@@ -90,7 +93,7 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            
+
             {/* CART BUTTON  */}
             {/* <Button
               variant="ghost"
@@ -104,7 +107,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-           {/* <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               className="p-2 relative"
@@ -140,11 +143,10 @@ const Navbar = () => {
                 key={item.name}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? "text-saffron-500 bg-saffron-50"
-                    : "text-gray-700 hover:text-saffron-500 hover:bg-gray-50"
-                }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${isActive(item.path)
+                  ? "text-saffron-500 bg-saffron-50"
+                  : "text-gray-700 hover:text-saffron-500 hover:bg-gray-50"
+                  }`}
               >
                 {item.name}
               </Link>
