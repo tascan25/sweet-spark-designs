@@ -53,13 +53,13 @@ const Contact = () => {
   };
 
   const handleAddressClick = () => {
-    const address = "17 Main Market, Malviya Nagar, New Delhi, Delhi 110017, India";
+    const address = "moti sweets, delhi";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
   };
 
   const handleDirectionsClick = () => {
-    const address = "17 Main Market, Malviya Nagar, New Delhi, Delhi 110017, India";
+    const address = "moti sweets, delhi";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
   };
