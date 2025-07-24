@@ -117,7 +117,8 @@ const Products = () => {
           </motion.div>
 
           {/* CTA Button */}
-          <motion.a
+          <div className="flex flex-row flex-wrap justify-center items-center gap-10">
+              <motion.a
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -130,6 +131,22 @@ const Products = () => {
               Explore Our Collection
             </Button>
           </motion.a>
+          <motion.a
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            href="https://www.zomato.com/ncr/moti-sweets-1-malviya-nagar-new-delhi?amp=1"
+            target="_blank"
+          >
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Order now
+            </Button>
+          </motion.a>
+          </div>
+        
         </div>
 
         {/* Bottom Wave */}

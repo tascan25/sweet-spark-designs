@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { WholeAppContext } from "@/context/store";
 import { IoCartOutline } from "react-icons/io5";
 import compname from "@/assets/compname.png";
+import path from "path";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +38,9 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" },
-    { name: "Liked", path: "/liked" }
+    // { name: "Contact", path: "/contact" },
+    // { name: "Liked", path: "/liked" },
+    {name:"360°",path:"/"}
 
   ];
 
@@ -53,7 +55,7 @@ const Navbar = () => {
         : "bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 py-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -61,10 +63,16 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="flex flex-row justify-center items-center gap-4"
             >
-              <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md" />
+              <img src='./company_logo.png' alt="company_logo" className="w-10 h-10 rounded-md object-fill" />
               <span className="flex flex-row justify-center items-center">
                 <img src={compname} className="w-24 md:w-28" />
-                <span className="text-4xl font-lobster font-bold text-gradient moti-text">Sweets
+                <span className="text-4xl font-lobster font-bold text-gradient moti-text flex flex-col justify-start items-center mt-3">
+                  {/* <span>
+                    Sweets
+                  </span> */}
+                  <span className="text-sm">
+                    Since 1962
+                  </span>
                 </span>
               </span>
 

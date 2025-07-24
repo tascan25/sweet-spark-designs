@@ -115,7 +115,7 @@ export default function ProductsCard({
           </div>
 
           {/* Quick Action Buttons */}
-          <div className={`absolute top-4 right-4 flex flex-col gap-2 z-20 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+          {/* <div className={`absolute top-4 right-4 flex flex-col gap-2 z-20 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
             }`}>
             <button
               onClick={handleLikeProductToggle}
@@ -126,7 +126,7 @@ export default function ProductsCard({
             <button className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-200">
               <Eye className="w-4 h-4 text-gray-600" />
             </button>
-          </div>
+          </div> */}
 
 
         </div>
