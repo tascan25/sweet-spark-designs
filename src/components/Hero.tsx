@@ -4,6 +4,7 @@ import { ChevronDown, Sparkles, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import motibg from "@/assets/motibg.mp4";
+import compname from "@/assets/compname.png";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -76,12 +77,14 @@ const Hero = () => {
             <Sparkles className="w-12 h-12 text-orange-400" />
           </motion.div>
 
-          <h1 className="text-5xl md:text-9xl font-semibold mb-6">
-            <span className="text-gradient font-lobster moti-text">Moti</span>{" "}
+          <h1 className="text-5xl md:text-9xl font-semibold mb-6 flex flex-row justify-center items-center flex-wrap">
+            <span className="text-gradient font-lobster moti-text">
+              <img src={compname} className="w-40 md:w-96"/>
+              </span>{" "}
             <span className="text-gray-100 font-lobster moti-text">Sweets</span>
           </h1>
 
-          <p className="text-xl md:text-3xl text-gray-200 max-w-3xl mx-auto leading-relaxed moti-text">
+          <p className="text-sm md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
             Experience the authentic taste of India with our handcrafted sweets,
             made from traditional recipes passed down through generations
           </p>
