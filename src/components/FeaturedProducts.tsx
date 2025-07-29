@@ -7,22 +7,24 @@ import kajuBasketBurji from "@/assets/sweets/kaju_basket_burji.JPG";
 import kajuFruitTray from "@/assets/sweets/kaju_fruit_tray.JPG";
 import rasmmalaicake from '@/assets/cake/ras_malai_cake.JPG';
 import beetrootcheetos from "@/assets/packed/beetrootcheetos.JPG";
+import bondiladoo from '@/assets/sweets/boondi ladoo.JPG'
+import badambite from '@/assets/sweets/badam bite.JPG'
 
 const FeaturedProducts = () => {
 
   const products = [
-  {
-        id: 1,
-        name: "Kaju Basket Burji",
-        description: "A Royal Treat in Every Crunch! Handcrafted cashew baskets overflowing with our signature bhurji blend—nutty, melt‑in‑the‑mouth luxury perfect for festive feasts or premium gifting. Only at Moti Sweets.",
-        price: 450,
-        rating: 4.9,
-        reviews: 234,
-        image: kajuBasketBurji,
-        category: "sweets",
-        badges: ["Bestseller", "Premium"],
-        quantity:0
-      },
+    {
+            id: 1,
+            name: "Bondi Ladoo",
+            description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+            price: 520,
+            rating: 4.9,
+            reviews: 167,
+            image: bondiladoo,
+            category: "sweets",
+            badges: ["Premium", "Limited"],
+            quantity:0
+          },
     {
       id: 2,
       name: "Ras Malai Cake",
@@ -36,17 +38,17 @@ const FeaturedProducts = () => {
       quantity: 0
     },
    {
-        id: 3,
-        name: "Kaju Fruit Tray",
-        description: "A Fruity Twist to Royal Indulgence! Finest cashews sculpted into vibrant fruit shapes, each infused with delicate flavors and artfully arranged in a luxurious tray. A colorful, elegant delight—perfect for festive gifting or special celebrations. Only at Moti Sweets—where tradition meets creative sweetness.",
-        price: 280,
-        rating: 4.7,
-        reviews: 156,
-        image: kajuFruitTray,
-        category: "sweets",
-        badges: ["Popular"],
-        quantity:0
-      },
+            id: 3,
+            name: "Badam Bite",
+            description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+            price: 520,
+            rating: 4.9,
+            reviews: 167,
+            image: badambite,
+            category: "sweets",
+            badges: ["Premium", "Limited"],
+            quantity:0
+          },
     {
       id: 4,
       name: "Beetroot Cheetos",

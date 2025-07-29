@@ -23,9 +23,15 @@ import quinoasticks from "@/assets/packed/quinoasticks.JPG";
 import sorghumchips from "@/assets/packed/sorghumchips.JPG";
 
 
+import { newProd } from "./newAddedProducts";
+
+
+
+
 
 
 export const products = [
+  ...newProd,
     {
       id: 1,
       name: "Kaju Basket Burji",
@@ -50,30 +56,30 @@ export const products = [
       badges: ["Traditional"],
       quantity:0
     },
-    {
-      id: 3,
-      name: "Kaju Fruit Tray",
-      description: "A Fruity Twist to Royal Indulgence! Finest cashews sculpted into vibrant fruit shapes, each infused with delicate flavors and artfully arranged in a luxurious tray. A colorful, elegant delight—perfect for festive gifting or special celebrations. Only at Moti Sweets—where tradition meets creative sweetness.",
-      price: 280,
-      rating: 4.7,
-      reviews: 156,
-      image: kajuFruitTray,
-      category: "sweets",
-      badges: ["Popular"],
-      quantity:0
-    },
-    {
-      id: 4,
-      name: "Kaju Strawberry",
-      description: "A Berry Delight with a Nutty Twist! Premium cashew bites kissed with sweet strawberry essence, artfully arranged in an elegant tray. Tradition meets innovation in every melt‑in‑the‑mouth morsel—ideal for gifting or celebrating moments of joy. Only at Moti Sweets.",
-      price: 380,
-      rating: 4.6,
-      reviews: 143,
-      image: kajuStrawberry,
-      category: "sweets",
-      badges: ["Festival Special"],
-      quantity:0
-    },
+    // {
+    //   id: 3,
+    //   name: "Kaju Fruit Tray",
+    //   description: "A Fruity Twist to Royal Indulgence! Finest cashews sculpted into vibrant fruit shapes, each infused with delicate flavors and artfully arranged in a luxurious tray. A colorful, elegant delight—perfect for festive gifting or special celebrations. Only at Moti Sweets—where tradition meets creative sweetness.",
+    //   price: 280,
+    //   rating: 4.7,
+    //   reviews: 156,
+    //   image: kajuFruitTray,
+    //   category: "sweets",
+    //   badges: ["Popular"],
+    //   quantity:0
+    // },
+    // {
+    //   id: 4,
+    //   name: "Kaju Strawberry",
+    //   description: "A Berry Delight with a Nutty Twist! Premium cashew bites kissed with sweet strawberry essence, artfully arranged in an elegant tray. Tradition meets innovation in every melt‑in‑the‑mouth morsel—ideal for gifting or celebrating moments of joy. Only at Moti Sweets.",
+    //   price: 380,
+    //   rating: 4.6,
+    //   reviews: 143,
+    //   image: kajuStrawberry,
+    //   category: "sweets",
+    //   badges: ["Festival Special"],
+    //   quantity:0
+    // },
     {
       id: 5,
       name: "4 Line Fancy Box",
@@ -88,7 +94,7 @@ export const products = [
     },
     {
       id: 6,
-      name: "Desi Ghee SpeciaL Bhaji Box",
+      name: "Desi Ghee Special Bhaji Box",
       description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
       price: 520,
       rating: 4.9,
@@ -217,5 +223,6 @@ export const products = [
         category: "packed",
         badges: ["Premium"],
         quantity:0
-      }
+      },
+     
   ];
