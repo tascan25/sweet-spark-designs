@@ -23,7 +23,7 @@ import image19 from '@/assets/resturant/PANO/GROUNDFLOOR/image19.jpg'
 export const restimages = [
     {
       url: image1,
-      title: "Main Dining Area"
+      title: "Elegant Interior"
     },
     {
       url: image2, 
@@ -31,39 +31,39 @@ export const restimages = [
     },
     {
       url: image3,
-      title: "Open Kitchen"
+      title: "Elegant Interior"
     },
     {
       url: image4,
-      title: "Cozy Corner"
+      title: "Elegant Interior"
     },
     {
       url: image5,
-      title: "Private Dining"
+      title: "Elegant Interior"
     },
     {
       url: image6,
-      title: "Bar Area"
+      title: "Elegant Interior"
     },
     {
       url: image7,
-      title: "Lounge Space"
+      title: "Elegant Interior"
     },
     {
       url: image8,
-      title: "Wine Collection"
+      title: "Elegant Interior"
     },
     {
       url: image9,
-      title: "Rooftop Terrace"
+      title: "Elegant Interior"
     },
     {
       url: image10,
-      title: "Outdoor Seating"
+      title: "Elegant Interior"
     },
     {
       url: image11,
-      title: "Chef's Table"
+      title: "Elegant Interior"
     },
     {
       url: image12,
