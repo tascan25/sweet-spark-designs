@@ -9,7 +9,7 @@ const Restaurant360Showcase = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="min-h-screen bg-black p-4 md:p-8 pt-96">
+    <div className="min-h-screen bg-black p-4 md:p-8 pt-56 md:pt-96">
       <div className="fixed inset-0 z-0">
         <video autoPlay muted loop className="w-full h-full object-cover">
           <source

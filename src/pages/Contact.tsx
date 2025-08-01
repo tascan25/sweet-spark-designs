@@ -14,8 +14,13 @@ import {
   MessageSquare, 
   Users, 
   HeartHandshake, 
-  Star } from "lucide-react";
-import { toast } from "sonner";
+  Star,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  Share2
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,12 +33,12 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -42,7 +47,6 @@ const Contact = () => {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
-    toast.success("Message sent successfully! We'll get back to you soon.");
 
     // Reset form after success
     setTimeout(() => {
@@ -74,6 +78,38 @@ const Contact = () => {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
   };
 
+  // Social media links
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: Facebook,
+      url: "https://facebook.com/motisweets",
+      color: "hover:text-blue-600",
+      bgColor: "hover:bg-blue-50"
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com/motisweets",
+      color: "hover:text-pink-600",
+      bgColor: "hover:bg-pink-50"
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      url: "https://twitter.com/motisweets",
+      color: "hover:text-blue-400",
+      bgColor: "hover:bg-blue-50"
+    },
+    {
+      name: "YouTube",
+      icon: Youtube,
+      url: "https://youtube.com/@motisweets",
+      color: "hover:text-red-600",
+      bgColor: "hover:bg-red-50"
+    }
+  ];
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -95,7 +131,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us",
       details: ["Motisweets@yahoo.com", "Response within 24hrs"],
-      color: "text-saffron-500",
+      color: "text-orange-500",
       onClick: () => window.location.href = "mailto:Motisweets@yahoo.com",
       clickable: true
     },
@@ -167,7 +203,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-lobster mb-6 leading-tight">
               <span className="text-gray-800 font-lobster">Let's</span>
               <br />
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent font-lobster">
@@ -261,13 +297,13 @@ const Contact = () => {
         {/* Bottom Wave */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
           <svg className="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-cream-50"></path>
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-orange-50"></path>
           </svg>
         </div>
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream-50 via-amber-50 to-amber-100">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-amber-50 to-amber-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +321,7 @@ const Contact = () => {
                 onClick={info.clickable ? info.onClick : undefined}
                 className={info.clickable ? "cursor-pointer" : ""}
               >
-                <Card className="h-full rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-white to-cream-50">
+                <Card className="h-full rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-white to-orange-50">
                   <CardContent className="p-8 text-center">
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -295,7 +331,7 @@ const Contact = () => {
                       <info.icon className={`w-8 h-8 ${info.color}`} />
                     </motion.div>
                     
-                    <h3 className="text-xl font-poppins font-semibold mb-4 text-gray-800">
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800">
                       {info.title}
                     </h3>
                     
@@ -318,6 +354,89 @@ const Contact = () => {
             ))}
           </motion.div>
 
+          {/* Social Media Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-20"
+          >
+            <Card className="rounded-3xl shadow-xl bg-gradient-to-br from-white to-orange-50">
+              <CardContent className="p-8 text-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="mb-8"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 mb-6">
+                    <Share2 className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4">
+                    Follow Us on <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Social Media</span>
+                  </h2>
+                  <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Stay connected with us for the latest updates, sweet deals, and behind-the-scenes content from Moti Sweets!
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="flex flex-wrap justify-center gap-6"
+                >
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      whileHover={{ scale: 1.1, y: -5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`group flex flex-col items-center p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 ${social.bgColor} min-w-[120px]`}
+                    >
+                      <div className={`w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 mb-3 group-hover:bg-white transition-colors duration-300`}>
+                        <social.icon className={`w-6 h-6 text-gray-600 transition-colors duration-300 ${social.color}`} />
+                      </div>
+                      <span className={`text-sm font-medium text-gray-700 transition-colors duration-300 ${social.color}`}>
+                        {social.name}
+                      </span>
+                    </motion.a>
+                  ))}
+                </motion.div>
+
+                {/* Social Media Stats */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
+                >
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-indigo-600">15K+</div>
+                    <div className="text-sm text-gray-600">Facebook Followers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-pink-600">8K+</div>
+                    <div className="text-sm text-gray-600">Instagram Followers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">3K+</div>
+                    <div className="text-sm text-gray-600">Twitter Followers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-600">5K+</div>
+                    <div className="text-sm text-gray-600">YouTube Subscribers</div>
+                  </div>
+                </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
           {/* Contact Form and Map */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -326,10 +445,10 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="rounded-3xl shadow-xl bg-gradient-to-br from-white to-cream-50">
+              <Card className="rounded-3xl shadow-xl bg-gradient-to-br from-white to-orange-50">
                 <CardContent className="p-8">
-                  <h2 className="text-3xl font-poppins font-bold mb-6 text-center">
-                    Send Us a <span className="text-gradient">Message</span>
+                  <h2 className="text-3xl font-bold mb-6 text-center">
+                    Send Us a <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">Message</span>
                   </h2>
 
                   {isSubmitted ? (
@@ -347,7 +466,7 @@ const Contact = () => {
                       </p>
                     </motion.div>
                   ) : (
-                    <div className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <motion.div
                           whileFocus={{ scale: 1.02 }}
@@ -359,7 +478,7 @@ const Contact = () => {
                             value={formData.name}
                             onChange={handleInputChange}
                             required
-                            className="rounded-2xl border-2 border-gray-200 focus:border-saffron-500 transition-all duration-300 h-12"
+                            className="rounded-2xl border-2 border-gray-200 focus:border-orange-500 transition-all duration-300 h-12"
                           />
                         </motion.div>
                         
@@ -374,7 +493,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleInputChange}
                             required
-                            className="rounded-2xl border-2 border-gray-200 focus:border-saffron-500 transition-all duration-300 h-12"
+                            className="rounded-2xl border-2 border-gray-200 focus:border-orange-500 transition-all duration-300 h-12"
                           />
                         </motion.div>
                       </div>
@@ -389,7 +508,7 @@ const Contact = () => {
                             placeholder="Phone Number"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            className="rounded-2xl border-2 border-gray-200 focus:border-saffron-500 transition-all duration-300 h-12"
+                            className="rounded-2xl border-2 border-gray-200 focus:border-orange-500 transition-all duration-300 h-12"
                           />
                         </motion.div>
                         
@@ -402,7 +521,7 @@ const Contact = () => {
                             placeholder="Subject"
                             value={formData.subject}
                             onChange={handleInputChange}
-                            className="rounded-2xl border-2 border-gray-200 focus:border-saffron-500 transition-all duration-300 h-12"
+                            className="rounded-2xl border-2 border-gray-200 focus:border-orange-500 transition-all duration-300 h-12"
                           />
                         </motion.div>
                       </div>
@@ -418,7 +537,7 @@ const Contact = () => {
                           onChange={handleInputChange}
                           required
                           rows={6}
-                          className="rounded-2xl border-2 border-gray-200 focus:border-saffron-500 transition-all duration-300 resize-none"
+                          className="rounded-2xl border-2 border-gray-200 focus:border-orange-500 transition-all duration-300 resize-none"
                         />
                       </motion.div>
 
@@ -429,7 +548,7 @@ const Contact = () => {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full bg-saffron-500 hover:bg-saffron-600 text-white py-6 rounded-2xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-6 rounded-2xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         >
                           {isSubmitting ? (
                             <motion.div
@@ -443,7 +562,7 @@ const Contact = () => {
                           {isSubmitting ? "Sending..." : "Send Message"}
                         </Button>
                       </motion.div>
-                      </div>
+                    </form>
                   )}
                 </CardContent>
               </Card>
@@ -458,10 +577,10 @@ const Contact = () => {
             >
               <Card className="h-full rounded-3xl shadow-xl overflow-hidden">
                 <CardContent className="p-0 h-full">
-                  <div className="relative h-full min-h-[500px] bg-gradient-to-br from-saffron-100 to-rose-100 flex items-center justify-center">
+                  <div className="relative h-full min-h-[500px] bg-gradient-to-br from-orange-100 to-rose-100 flex items-center justify-center">
                     <div className="text-center">
-                      <MapPin className="w-16 h-16 text-saffron-500 mx-auto mb-4" />
-                      <h3 className="text-2xl font-poppins font-semibold mb-2">
+                      <MapPin className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+                      <h3 className="text-2xl font-semibold mb-2">
                         Visit Our Store
                       </h3>
                       <p className="text-gray-600 mb-4">
@@ -470,7 +589,7 @@ const Contact = () => {
                       </p>
                       <Button
                         variant="outline"
-                        className="border-saffron-500 text-saffron-600 hover:bg-saffron-50 rounded-full"
+                        className="border-orange-500 text-orange-600 hover:bg-orange-50 rounded-full"
                         onClick={handleDirectionsClick}
                       >
                         Get Directions
@@ -488,7 +607,7 @@ const Contact = () => {
                         repeat: Infinity,
                         ease: "easeInOut"
                       }}
-                      className="absolute top-10 left-10 w-8 h-8 bg-saffron-300 rounded-full opacity-60"
+                      className="absolute top-10 left-10 w-8 h-8 bg-orange-300 rounded-full opacity-60"
                     />
                     <motion.div
                       animate={{
