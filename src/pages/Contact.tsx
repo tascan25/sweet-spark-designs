@@ -84,7 +84,7 @@ const Contact = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://facebook.com/motisweets",
+      url: "https://in.linkedin.com/company/motisweets",
       color: "hover:text-blue-600",
       bgColor: "hover:bg-blue-50"
     },
