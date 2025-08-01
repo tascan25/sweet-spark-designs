@@ -19,7 +19,8 @@ import {
   Instagram,
   Twitter,
   Youtube,
-  Share2
+  Share2,
+  Linkedin
 } from "lucide-react";
 
 const Contact = () => {
@@ -81,8 +82,8 @@ const Contact = () => {
   // Social media links
   const socialLinks = [
     {
-      name: "Facebook",
-      icon: Facebook,
+      name: "LinkedIn",
+      icon: Linkedin,
       url: "https://facebook.com/motisweets",
       color: "hover:text-blue-600",
       bgColor: "hover:bg-blue-50"

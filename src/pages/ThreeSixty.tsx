@@ -8,20 +8,17 @@ import motibg from "@/assets/motibg.mp4";
 const Restaurant360Showcase = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  return (
-    <div className="min-h-screen bg-black p-4 md:p-8 pt-56 md:pt-96">
+  return ( 
+    <div className="min-h-screen bg-black p-4 md:p-8 pt-20">
       <div className="fixed inset-0 z-0">
         <video autoPlay muted loop className="w-full h-full object-cover">
-          <source
-            src={motibg}
-            type="video/mp4"
-          />
+          <source src={motibg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Dim overlay */}
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       </div>
-      <div className="relative z-10 p-4 md:p-8 pt-96">
+      <div className="relative z-10 p-4 md:p-8">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +30,9 @@ const Restaurant360Showcase = () => {
             </span>{" "}
             <span className="text-gray-100 font-lobster moti-text">Sweets</span>
           </h1>
-          <p className="text-gray-200 font-lobster text-lg">Restaurant Gallery</p>
+          <p className="text-gray-200 font-lobster text-lg">
+            Restaurant Gallery
+          </p>
         </motion.div>
 
         {/* Photo Grid */}
@@ -60,13 +59,13 @@ const Restaurant360Showcase = () => {
                     alt={image.title}
                     className="w-full h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4">
                       <h3 className="text-white font-semibold text-lg">
                         {image.title}
                       </h3>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}
