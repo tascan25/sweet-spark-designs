@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import LikedSection from "./pages/Liked";
 import Cart from "./pages/Cart";
+import Restaurant360Showcase from "./pages/ThreeSixty";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
               <Route path="/liked" element={<LikedSection/>}/>
               <Route path="/cart" element={<Cart/>}/>
+              <Route path="/360" element={<Restaurant360Showcase/>}/>
             </Routes>
           </AnimatePresence>
         </div>

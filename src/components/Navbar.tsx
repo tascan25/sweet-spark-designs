@@ -73,7 +73,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Products", path: "/products", hasDropdown: true },
-    { name: "360°", path: "/" }
+    { name: "360°", path: "/360" }
   ];
 
   const isActive = (path: string) => location.pathname === path;
