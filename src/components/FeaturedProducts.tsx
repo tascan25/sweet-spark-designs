@@ -14,17 +14,17 @@ const FeaturedProducts = () => {
 
   const products = [
     {
-            id: 1,
-            name: "Bondi Ladoo",
-            description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
-            price: 520,
-            rating: 4.9,
-            reviews: 167,
-            image: bondiladoo,
-            category: "sweets",
-            badges: ["Premium", "Limited"],
-            quantity:0
-          },
+      id: 1,
+      name: "Bondi Ladoo",
+      description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+      price: 520,
+      rating: 4.9,
+      reviews: 167,
+      image: bondiladoo,
+      category: "sweets",
+      badges: ["Premium", "Limited"],
+      quantity: 0
+    },
     {
       id: 2,
       name: "Ras Malai Cake",
@@ -37,22 +37,22 @@ const FeaturedProducts = () => {
       badges: ["Premium"],
       quantity: 0
     },
-   {
-            id: 3,
-            name: "Badam Bite",
-            description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
-            price: 520,
-            rating: 4.9,
-            reviews: 167,
-            image: badambite,
-            category: "sweets",
-            badges: ["Premium", "Limited"],
-            quantity:0
-          },
+    {
+      id: 3,
+      name: "Badam Bite",
+      description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+      price: 520,
+      rating: 4.9,
+      reviews: 167,
+      image: badambite,
+      category: "sweets",
+      badges: ["Premium", "Limited"],
+      quantity: 0
+    },
     {
       id: 4,
       name: "Beetroot Cheetos",
-        description: "Bold, Crunchy & Naturally Colorful!,The Smarter Way to Snack! Crunch into vibrant flavor with our Beetroot Chips — real beetroot slices oven‑baked to a satisfying crisp, lightly seasoned for a burst of natural taste. Nutrient‑rich, guilt‑free, and perfect for kids and grown‑ups alike—only at Moti Sweets.",
+      description: "Bold, Crunchy & Naturally Colorful!,The Smarter Way to Snack! Crunch into vibrant flavor with our Beetroot Chips — real beetroot slices oven‑baked to a satisfying crisp, lightly seasoned for a burst of natural taste. Nutrient‑rich, guilt‑free, and perfect for kids and grown‑ups alike—only at Moti Sweets.",
       price: 420,
       rating: 4.8,
       reviews: 176,
@@ -123,16 +123,31 @@ const FeaturedProducts = () => {
             />
           ))}
         </motion.div>
-
-        <Button
-          size="lg"
-          className="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-6 text-lg rounded-2xl shadow-glow transition-all duration-300 hover:scale-105
-          mt-14"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-wrap gap-6 justify-center mt-14"
         >
-          <Link to={"/products"}>View More</Link>
-        </Button>
-      </div>
-    </section>
+          <Button
+            size="lg"
+            className="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-6 text-lg rounded-2xl shadow-glow transition-all duration-300 hover:scale-105"
+          >
+            <Link to="/products">View More</Link>
+          </Button>
+          <Button
+            size="lg"
+            className="bg-saffron-500 hover:bg-saffron-600 text-white px-8 py-6 text-lg rounded-2xl shadow-glow transition-all duration-300 hover:scale-105"
+          >
+            <Link to="https://www.zomato.com/ncr/moti-sweets-1-malviya-nagar-new-delhi?amp=1" target="_blank">
+              Order Now
+            </Link>
+          </Button>
+        </motion.div>
+
+    </div>
+    </section >
   );
 };
 

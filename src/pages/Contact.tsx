@@ -123,7 +123,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9310000073", "Mon-Sat: 8AM-11PM"],
+      details: ["Sweets -> +91 9310000073","Resturant -> +91 8892000073","Bakey -> +91 7661000073", "Mon-Sat: 8AM-11PM"],
       color: "text-green-500",
       onClick: handleCallClick,
       clickable: true

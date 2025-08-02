@@ -138,10 +138,10 @@ export default function ProductsCard({
             <h3 className="text-xl font-bold text-gray-800 leading-tight group-hover:text-orange-600 transition-colors duration-300">
               {name}
             </h3>
-            <div className="flex items-center space-x-1 bg-yellow-50 px-2 py-1 rounded-full">
+            {/* <div className="flex items-center space-x-1 bg-yellow-50 px-2 py-1 rounded-full">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               <span className="text-sm font-semibold text-yellow-700">{rating}</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Enhanced Description */}
@@ -159,11 +159,11 @@ export default function ProductsCard({
           </div>
 
           {/* Reviews only */}
-          <div className="text-center mb-4">
+          {/* <div className="text-center mb-4">
             <span className="text-sm text-gray-500 bg-blue-50 px-3 py-2 rounded-full font-medium">
               {reviews} happy customers
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Subtle bottom accent */}
