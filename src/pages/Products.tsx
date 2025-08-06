@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Filter, Sparkles, Award, Clock } from "lucide-react";
+import { Filter, Sparkles, Award, Clock, Palmtree, Slash } from "lucide-react";
 import ProductsCard from "@/components/ui/ProductsCard";
 import { products } from '@/data/Products'
 
@@ -34,7 +34,7 @@ const Products = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-orange-400/10 to-red-400/5"></div>
-          
+
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-orange-200 to-red-300 rounded-full opacity-25 animate-bounce" style={{ animationDelay: '1s' }}></div>
@@ -114,39 +114,56 @@ const Products = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Fresh Daily</h3>
               <p className="text-gray-600">Prepared fresh every day for optimal taste</p>
             </div>
+
+            <div className="group p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-amber-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div style={{ position: 'relative', width: 24, height: 24 }}>
+                  {/* Palm tree silhouette */}
+                  <Palmtree size={24} color="currentColor" />
+                  {/* Diagonal “no” slash overlaid */}
+                  <Slash
+                    size={24}
+                    color="currentColor"
+                    style={{ position: 'absolute', top: 0, left: 0 }}
+                  />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">No Palm Oil</h3>
+              <p className="text-gray-600">Free from Palm Oil, Full of Care.</p>
+            </div>
           </motion.div>
 
           {/* CTA Button */}
           <div className="flex flex-row flex-wrap justify-center items-center gap-10">
-              <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            href="#products"
-          >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            <motion.a
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              href="#products"
             >
-              Explore Our Collection
-            </Button>
-          </motion.a>
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            href="https://www.zomato.com/ncr/moti-sweets-1-malviya-nagar-new-delhi?amp=1"
-            target="_blank"
-          >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Explore Our Collection
+              </Button>
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              href="https://www.zomato.com/ncr/moti-sweets-1-malviya-nagar-new-delhi?amp=1"
+              target="_blank"
             >
-              Order now
-            </Button>
-          </motion.a>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Order now
+              </Button>
+            </motion.a>
           </div>
-        
+
         </div>
 
         {/* Bottom Wave */}
@@ -178,8 +195,8 @@ const Products = () => {
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`rounded-full px-6 py-2 transition-all duration-300 ${selectedCategory === category.id
-                      ? "bg-saffron-500 hover:bg-saffron-600 text-white"
-                      : "border-saffron-500 text-saffron-600 hover:bg-saffron-50"
+                    ? "bg-saffron-500 hover:bg-saffron-600 text-white"
+                    : "border-saffron-500 text-saffron-600 hover:bg-saffron-50"
                     }`}
                 >
                   {category.name}

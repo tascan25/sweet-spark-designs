@@ -5,16 +5,19 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import motibg from "@/assets/motibg.mp4";
 import compname from "@/assets/compname.png";
+import complogo from '@/assets/complogo.png'
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const taglines = [
-    "Authentic Traditional Sweets Since 1947",
+    "Authentic Traditional Sweets Since 1962",
     "Made with Love, Served with Pride",
     "Experience the True Taste of India",
     "Fresh Daily • Premium Quality • Pure Ingredients",
+    "Situated in the Heart of the South Delhi",
     "Your Sweet Memories Start Here",
+    "No Palm oil"
   ];
 
   useEffect(() => {
@@ -69,20 +72,25 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <motion.div
+          {/* <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="inline-block mb-4"
           >
             <Sparkles className="w-12 h-12 text-orange-400" />
-          </motion.div>
+          </motion.div> */}
 
-          <h1 className="text-5xl md:text-9xl font-semibold mb-6 flex flex-row justify-center items-center flex-wrap">
+          {/* <h1 className="text-5xl md:text-9xl font-semibold mb-6 flex flex-row justify-center items-center flex-wrap">
             <span className="text-gradient font-lobster moti-text">
-              <img src={compname} className="w-40 md:w-96"/>
-              </span>{" "}
+              <img src={compname} className="w-40 md:w-96" />
+            </span>{" "}
             <span className="text-gray-100 font-lobster moti-text">Sweets</span>
-          </h1>
+          </h1> */}
+
+<motion.div className="flex flex-row justify-center items-center flex-wrap">
+  <motion.img src={complogo} className="w-96 h-96"/>
+</motion.div>
+        
 
           <p className="text-sm md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
             Experience the authentic taste of India with our handcrafted sweets,

@@ -23,16 +23,36 @@ import {
   Linkedin
 } from "lucide-react";
 
+// EmailJS Integration - Add your credentials here
+// Step 1: Install EmailJS: npm install @emailjs/browser
+// Step 2: Import EmailJS
+import emailjs from '@emailjs/browser';
+// Fix: Import complogo properly or use a fallback
+// import complogo from '@/assets/complogo.png'
+
+// Step 3: Initialize EmailJS with your Public Key
+// Add this in your main app file or before using emailjs
+emailjs.init("l4MQLFh-BlNdjTLeZ"); // Replace with your EmailJS public key
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
+    inquiryType: "general", // New field for radio buttons
+    imageURL: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // EmailJS Configuration - Replace with your actual credentials
+  const EMAILJS_CONFIG = {
+    SERVICE_ID: "service_2tpanmq", // Replace with your EmailJS service ID (e.g., "service_abc123")
+    TEMPLATE_ID: "template_eo77f0h", // Replace with your EmailJS template ID (e.g., "template_xyz789")
+    PUBLIC_KEY: "l4MQLFh-BlNdjTLeZ" // Replace with your EmailJS public key (e.g., "user_abc123xyz")
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,23 +63,68 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // EmailJS Implementation - FIXED VERSION
+      
+      // Fix: Use a proper image URL or fallback
+      const logoUrl = "https://ibb.co/KpmD7d0j"; // Replace with your actual logo URL
+      
+      const templateParams = {
+        // Fix: Ensure these match your EmailJS template variable names exactly
+        from_name: formData.name,
+        user_name: formData.name, // Alternative name field
+        from_email: formData.email,
+        user_email: formData.email, // Alternative email field
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+        inquiry_type: formData.inquiryType,
+        inquiryType: formData.inquiryType, // Alternative field name
+        imageURL: logoUrl, // Fixed image URL
+        logo_url: logoUrl, // Alternative image field name
+        to_name: "Moti Sweets Team",
+        // Add timestamp for tracking
+        timestamp: new Date().toLocaleString(),
+      };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      console.log('Sending template params:', templateParams); // Debug log
 
-    // Reset form after success
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-    }, 3000);
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result);
+      
+      // Temporary simulation - Remove this when EmailJS is implemented
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Reset form after success
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          inquiryType: "general",
+          imageURL: ""
+        });
+      }, 3000);
+
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      console.error('Error details:', error.text || error.message); // More detailed error logging
+      setIsSubmitting(false);
+      // You can add error handling here (show error message to user)
+      alert('Failed to send message. Please try again or contact us directly.');
+    }
   };
 
   // Click handlers for interactive elements
@@ -143,6 +208,13 @@ const Contact = () => {
       color: "text-rose-500",
       clickable: false
     }
+  ];
+
+  // Radio button options
+  const inquiryOptions = [
+    { value: "general", label: "General Inquiry" },
+    { value: "bulk", label: "Bulk Ordering" },
+    { value: "export", label: "Export" }
   ];
 
   return (
@@ -526,6 +598,64 @@ const Contact = () => {
                           />
                         </motion.div>
                       </div>
+
+                      {/* Radio Button Section for Inquiry Type */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="space-y-3"
+                      >
+                        <label className="block text-sm font-medium text-gray-700 mb-3">
+                          Inquiry Type *
+                        </label>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          {inquiryOptions.map((option) => (
+                            <motion.label
+                              key={option.value}
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              className={`relative flex items-center p-4 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
+                                formData.inquiryType === option.value
+                                  ? 'border-orange-500 bg-orange-50'
+                                  : 'border-gray-200 hover:border-orange-300 hover:bg-orange-25'
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="inquiryType"
+                                value={option.value}
+                                checked={formData.inquiryType === option.value}
+                                onChange={handleInputChange}
+                                className="sr-only"
+                              />
+                              <div className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
+                                formData.inquiryType === option.value
+                                  ? 'border-orange-500'
+                                  : 'border-gray-300'
+                              }`}>
+                                {formData.inquiryType === option.value && (
+                                  <motion.div
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    className="w-2 h-2 rounded-full bg-orange-500"
+                                  />
+                                )}
+                              </div>
+                              <span className={`text-sm font-medium ${
+                                formData.inquiryType === option.value
+                                  ? 'text-orange-700'
+                                  : 'text-gray-700'
+                              }`}>
+                                {option.label}
+                              </span>
+                            </motion.label>
+                          ))}
+                        </div>
+                        <p className="text-xs text-gray-500 mt-2">
+                          Select "Bulk Ordering" for large quantity orders or "Export" for international business inquiries
+                        </p>
+                      </motion.div>
 
                       <motion.div
                         whileFocus={{ scale: 1.02 }}

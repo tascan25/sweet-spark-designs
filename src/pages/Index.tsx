@@ -5,6 +5,7 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import { ToastContainer } from "react-toastify";
+import ForiegnSection from "@/components/ForiegnSection"
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <ToastContainer stacked={true} draggable={true}/>
       <Hero />
       <FeaturedProducts />
+      <ForiegnSection/>
       <Stats />
       <Testimonials />
     </motion.div>
