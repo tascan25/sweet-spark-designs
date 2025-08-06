@@ -149,38 +149,38 @@ const Hero = () => {
 
       {/* 👉  Taglines Marquee at the very bottom  👈 */}
       <div className="absolute bottom-0 left-0 w-full h-12 overflow-hidden bg-gradient-to-r from-orange-500/90 via-red-500/90 to-pink-500/90">
-        {[0, 1].map((i) => (
-          <div
-            key={i}
-            className="absolute flex items-center h-full whitespace-nowrap animate-scroll"
-            style={{
-              animationDelay: `${i * 5}s`,
-              animationDuration: "10s",
-            }}
-          >
-            <div className="flex items-center space-x-8 text-white font-semibold text-base px-8">
-              {taglines.map((t, j) => (
-                <span key={j} className="flex items-center space-x-2">
-                  <Sparkles className="w-4 h-4 text-yellow-300" />
-                  <span>{t}</span>
-                  <span className="text-yellow-300">•</span>
-                </span>
-              ))}
-            </div>
+        <div
+          className="absolute flex items-center h-full whitespace-nowrap animate-scroll"
+        >
+          <div className="flex items-center space-x-8 text-white font-semibold text-base px-8">
+            {/* First set of taglines */}
+            {taglines.map((t, j) => (
+              <span key={j} className="flex items-center space-x-2">
+                <Sparkles className="w-4 h-4 text-yellow-300" />
+                <span>{t}</span>
+                <span className="text-yellow-300">•</span>
+              </span>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {taglines.map((t, j) => (
+              <span key={`duplicate-${j}`} className="flex items-center space-x-2">
+                <Sparkles className="w-4 h-4 text-yellow-300" />
+                <span>{t}</span>
+                <span className="text-yellow-300">•</span>
+              </span>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/*  CSS for the marquee animation */}
       <style>{`
         @keyframes scroll {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
         }
         .animate-scroll {
-          animation-name: scroll;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
+          animation: scroll 10s linear infinite;
         }
       `}</style>
     </section>

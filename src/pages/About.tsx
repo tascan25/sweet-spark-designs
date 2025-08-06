@@ -3,43 +3,44 @@ import { Heart, Star, Award, Users, Clock, Sparkles, ChefHat } from "lucide-reac
 import { Link } from "react-router-dom";
 
 const About = () => {
-  const timeline = [
-    {
-      year: "1962",
-      title: "Sweet Origins",
-      description:
-        "MOTI SWEETS is born in Malviya Nagar—our family's very first step in a journey of handcrafted mithai. Four generations later, those original recipes still form the heart of everything we do.",
-      icon: Heart,
-    },
-    {
-      year: "1998",
-      title: "Next‑Gen Leadership",
-      description:
-        "The fourth generation officially takes the reins, expanding our range to 310+ traditional recipes and setting the stage for future growth.",
-      icon: Star,
-    },
-    {
-      year: "2005",
-      title: "Flagship Store",
-      description:
-        "Opened our first boutique outlet in Malviya Nagar. Word spread fast as the community fell in love with our authentic sweets and warm, personal service.",
-      icon: Award,
-    },
-    {
-      year: "2015",
-      title: "Digital Sweet Experience",
-      description:
-        "Launched our e‑commerce platform—now anyone, anywhere in India can order fresh, handcrafted mithai with just a few clicks.",
-      icon: Users,
-    },
-    {
-      year: "2023",
-      title: "Modern Innovation",
-      description:
-        "Celebrating 60+ years of tradition by blending time‑honored recipes with sleek new packaging and ultra‑fast delivery for today's digitally‑savvy sweet‑lovers.",
-      icon: Clock,
-    },
-  ];
+ const timeline = [
+  {
+    year: "1962",
+    title: "Sweet Origins",
+    description:
+      "In 1962, in the heart of Malviya Nagar, our family opened the doors to what would become a legacy of handcrafted mithai. Drawing on generations of secret recipes, MOTI SWEETS set out to create confections that celebrated tradition, community, and the simple joy of sweetness.",
+    icon: Heart,
+  },
+  {
+    year: "1998",
+    title: "Next-Gen Leadership",
+    description:
+      "As the fourth generation stepped forward in 1998, we strengthened our commitment to excellence—expanding our repertoire to over 310 authentic recipes, modernizing operations, and laying the groundwork for our brand’s tomorrow while honoring our roots.",
+    icon: Star,
+  },
+  {
+    year: "2005",
+    title: "Expanded into Bakery Products",
+    description:
+      "In 2005, we branched out beyond sweets with our first boutique bakery in Malviya Nagar. Breads, pastries, and savory treats joined our mithai menu, and the neighborhood quickly embraced this delicious new chapter of MOTI SWEETS.",
+    icon: Award,
+  },
+  {
+    year: "2015",
+    title: "Packed Namkeen Biscuits",
+    description:
+      "2015 marked our debut in gourmet savory snacks, with the launch of packed namkeen biscuits. Combining our signature flavors with the convenience of modern packaging, we brought our taste of home into every pantry across India.",
+    icon: Users,
+  },
+  {
+    year: "2023",
+    title: "Modern Innovation",
+    description:
+      "Celebrating over 60 years of heritage, in 2023 we unveiled sleek, sustainable packaging and an ultra-fast delivery network. By marrying time-honored recipes with cutting-edge technology, we’re serving next-generation sweet-lovers wherever they are.",
+    icon: Clock,
+  },
+];
+
 
   // Floating animation variants
   const floatingVariants = {
