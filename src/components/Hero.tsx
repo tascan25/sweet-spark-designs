@@ -88,7 +88,7 @@ const Hero = () => {
           </h1> */}
 
 <motion.div className="flex flex-row justify-center items-center flex-wrap">
-  <motion.img src={complogo} className="w-96 h-96"/>
+  <motion.img src={complogo} className="w-80 h-80"/>
 </motion.div>
         
 
