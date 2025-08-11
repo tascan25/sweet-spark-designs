@@ -508,7 +508,7 @@ export const newProd = [
         },
         {
           id: 57,
-          name: "Desi Ghee Bondi Ladpp",
+          name: "Desi Ghee Bondi Ladoo",
           description: "Desi Ghee Boondi Laddoo from Moti Sweets is a rich, traditional sweet made from golden, pearl-sized boondi prepared in pure desi ghee, soaked in aromatic sugar syrup, and shaped into soft, round laddoos. Infused with cardamom and often sprinkled with melon seeds or dry fruits, it offers a juicy, melt-in-the-mouth sweetness with the warm, wholesome flavor of ghee. A festive favorite, it’s perfect for weddings, celebrations, and religious offerings. ",
           price: 520,
           rating: 4.9,
