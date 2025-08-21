@@ -16,7 +16,7 @@ const FeaturedProducts = () => {
     {
       id: 1,
       name: "Bondi Ladoo",
-      description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+      description: "Desi Ghee Boondi Laddoo from Moti Sweets is a rich, traditional sweet made from golden, pearl-sized boondi prepared in pure desi ghee, soaked in aromatic sugar syrup, and shaped into soft, round laddoos. Infused with cardamom and often sprinkled with melon seeds or dry fruits, it offers a juicy, melt-in-the-mouth sweetness with the warm, wholesome flavor of ghee. A festive favorite, it’s perfect for weddings, celebrations, and religious offerings.",
       price: 520,
       rating: 4.9,
       reviews: 167,
@@ -40,7 +40,7 @@ const FeaturedProducts = () => {
     {
       id: 3,
       name: "Badam Bite",
-      description: "Taste of Tradition in Every Bite! Dive into our Ghee‑Fried Bhaji Box — handpicked classics, lovingly cooked in pure desi ghee for unforgettable aroma and authentic flavor. Perfect for gifting or festive feasting—every bite tells a story, only at Moti Sweets. ",
+      description: "Badam Bite from Moti Sweets is a premium dry-fruit sweet crafted with rich almonds bound together in a delicate mix of pure desi ghee and mild natural sweeteners. Each piece offers a delightful crunch of roasted almonds balanced with subtle hints of cardamom, making it both indulgent and wholesome. Elegant in look and rich in taste, it’s perfect for gifting or enjoying as a refined treat during festivals and celebrations. ",
       price: 520,
       rating: 4.9,
       reviews: 167,
