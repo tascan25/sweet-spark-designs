@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
       reviews: 167,
       image: bondiladoo,
       category: "sweets",
-      badges: ["Premium", "Limited"],
+      badges: ["Premium", ""],
       quantity: 0
     },
     {
@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
       reviews: 167,
       image: badambite,
       category: "sweets",
-      badges: ["Premium", "Limited"],
+      badges: ["Premium", ""],
       quantity: 0
     },
     {

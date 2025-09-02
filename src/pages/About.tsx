@@ -235,7 +235,7 @@ const About = () => {
                 className="bg-white/80 backdrop-blur-sm text-gray-800 px-8 py-4 rounded-full font-semibold text-lg border-2 border-amber-200 hover:border-amber-400 transition-all duration-300"
 
               >
-                Learn Our Story
+                Know Our Story
               </motion.button>
             </motion.a>
 

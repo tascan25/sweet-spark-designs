@@ -101,7 +101,7 @@ export const products = [
       reviews: 167,
       image: desiGheeSpecialBhajiBox,
       category: "sweets",
-      badges: ["Premium", "Limited"],
+      badges: ["Premium", ""],
       quantity:0
     },
      {

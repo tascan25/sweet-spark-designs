@@ -59,7 +59,7 @@ export const newProd = [
           reviews: 167,
           image: whitecoconutbarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -71,7 +71,7 @@ export const newProd = [
           reviews: 167,
           image: smallpeda,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -83,7 +83,7 @@ export const newProd = [
           reviews: 167,
           image: rosebite,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -95,7 +95,7 @@ export const newProd = [
           reviews: 167,
           image: rollpatisa,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -107,7 +107,7 @@ export const newProd = [
           reviews: 167,
           image: rasgullasmall,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -119,7 +119,7 @@ export const newProd = [
           reviews: 167,
           image: rajasthaniladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -131,7 +131,7 @@ export const newProd = [
           reviews: 167,
           image: rabdi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -143,7 +143,7 @@ export const newProd = [
           reviews: 167,
           image: plainpatisa,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -155,7 +155,7 @@ export const newProd = [
           reviews: 167,
           image: plaincoconutladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -167,7 +167,7 @@ export const newProd = [
           reviews: 167,
           image: plainbesanladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -179,7 +179,7 @@ export const newProd = [
           reviews: 167,
           image: pistabarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -191,7 +191,7 @@ export const newProd = [
           reviews: 167,
           image: pinniplain,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -203,7 +203,7 @@ export const newProd = [
           reviews: 167,
           image: pinkcoconutbarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -215,7 +215,7 @@ export const newProd = [
           reviews: 167,
           image: pineappleladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -227,7 +227,7 @@ export const newProd = [
           reviews: 167,
           image: pethagoli,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -239,7 +239,7 @@ export const newProd = [
           reviews: 167,
           image: pedhadry,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -251,7 +251,7 @@ export const newProd = [
           reviews: 167,
           image: patisadesighee,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -263,7 +263,7 @@ export const newProd = [
           reviews: 167,
           image: panjeeridesighee,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -275,7 +275,7 @@ export const newProd = [
           reviews: 167,
           image: mishripeda,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
          {
@@ -287,7 +287,7 @@ export const newProd = [
           reviews: 167,
           image: milkcake,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -299,7 +299,7 @@ export const newProd = [
           reviews: 167,
           image: milkbarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -311,7 +311,7 @@ export const newProd = [
           reviews: 167,
           image: mathurapeda,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -323,7 +323,7 @@ export const newProd = [
           reviews: 167,
           image: mangobite,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -335,7 +335,7 @@ export const newProd = [
           reviews: 167,
           image: khoyakatlibarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -347,7 +347,7 @@ export const newProd = [
           reviews: 167,
           image: khoyakalsh,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -359,7 +359,7 @@ export const newProd = [
           reviews: 167,
           image: kahjoordelight,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -371,7 +371,7 @@ export const newProd = [
           reviews: 167,
           image: karachihalwakaju,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -383,7 +383,7 @@ export const newProd = [
           reviews: 167,
           image: karachihalwabadam,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -395,7 +395,7 @@ export const newProd = [
           reviews: 167,
           image: kalakand,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -407,7 +407,7 @@ export const newProd = [
           reviews: 167,
           image: kalakandsugarfree,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -419,7 +419,7 @@ export const newProd = [
           reviews: 167,
           image: kalajamundry,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -431,7 +431,7 @@ export const newProd = [
           reviews: 167,
           image: kajuroll,
           category: "",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -443,7 +443,7 @@ export const newProd = [
           reviews: 167,
           image: kajugujiya,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -455,7 +455,7 @@ export const newProd = [
           reviews: 167,
           image: kajubarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -467,7 +467,7 @@ export const newProd = [
           reviews: 167,
           image: gulabjamunsmall,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -479,7 +479,7 @@ export const newProd = [
           reviews: 167,
           image: gulabjamundry,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -491,7 +491,7 @@ export const newProd = [
           reviews: 167,
           image: dryfruitcoconutladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -503,7 +503,7 @@ export const newProd = [
           reviews: 167,
           image: dodabarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -515,7 +515,7 @@ export const newProd = [
           reviews: 167,
           image: desigheeebondiladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
 
@@ -528,7 +528,7 @@ export const newProd = [
           reviews: 167,
           image: milkcake,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -540,7 +540,7 @@ export const newProd = [
           reviews: 167,
           image: chumchum,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -552,7 +552,7 @@ export const newProd = [
           reviews: 167,
           image: bondiladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -564,7 +564,7 @@ export const newProd = [
           reviews: 167,
           image: bikaneribarfi,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -576,7 +576,7 @@ export const newProd = [
           reviews: 167,
           image: besanladoodesighee,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -588,7 +588,7 @@ export const newProd = [
           reviews: 167,
           image: barfichocolate,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -600,7 +600,7 @@ export const newProd = [
           reviews: 167,
           image: badambite,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -612,7 +612,7 @@ export const newProd = [
           reviews: 167,
           image: attapanjeeriladoo,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
         {
@@ -624,7 +624,7 @@ export const newProd = [
           reviews: 167,
           image: anjeeridelight,
           category: "sweets",
-          badges: ["Premium", "Limited"],
+          badges: ["Premium", ""],
           quantity:0
         },
 ]

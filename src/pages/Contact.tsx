@@ -160,20 +160,20 @@ const Contact = () => {
       color: "hover:text-pink-600",
       bgColor: "hover:bg-pink-50"
     },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "https://twitter.com/motisweets",
-      color: "hover:text-blue-400",
-      bgColor: "hover:bg-blue-50"
-    },
-    {
-      name: "YouTube",
-      icon: Youtube,
-      url: "https://youtube.com/@motisweets",
-      color: "hover:text-red-600",
-      bgColor: "hover:bg-red-50"
-    }
+    // {
+    //   name: "Twitter",
+    //   icon: Twitter,
+    //   url: "https://twitter.com/motisweets",
+    //   color: "hover:text-blue-400",
+    //   bgColor: "hover:bg-blue-50"
+    // },
+    // {
+    //   name: "YouTube",
+    //   icon: Youtube,
+    //   url: "https://youtube.com/@motisweets",
+    //   color: "hover:text-red-600",
+    //   bgColor: "hover:bg-red-50"
+    // }
   ];
 
   const contactInfo = [
@@ -188,7 +188,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["Sweets -> +91 9310000073","Restaurant -> +91 8892000073","Bakey -> +91 7661000073", "Mon-Sat: 8AM-11PM"],
+      details: ["Sweets -> +91 9310000073","Restaurant -> +91 8892000073","Bakey -> +91 7661000073", "Mon - Sun : 8:30 AM - 11 PM"],
       color: "text-green-500",
       onClick: handleCallClick,
       clickable: true
@@ -204,7 +204,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Monday - Sunday: 8AM - 11PM", "Sunday: 9AM - 12PM", "Festivals: Extended hours"],
+      details: ["Monday - Sunday : 8:30 AM - 11 PM", "Festivals: Extended hours"],
       color: "text-rose-500",
       clickable: false
     }

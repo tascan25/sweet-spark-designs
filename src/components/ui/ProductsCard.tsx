@@ -104,9 +104,9 @@ export default function ProductsCard({
                       ? 'bg-gradient-to-r from-purple-500 to-indigo-600'
                       : badge === 'Festival Special'
                         ? 'bg-gradient-to-r from-orange-500 to-red-600'
-                        : badge === 'Limited'
-                          ? 'bg-gradient-to-r from-red-500 to-pink-600 animate-bounce'
-                          : 'bg-gradient-to-r from-blue-500 to-cyan-600'
+                        : badge === 'Traditional'
+                          ? 'bg-gradient-to-r from-red-500 to-pink-600'
+                          : badge==="Fresh"?'bg-gradient-to-r from-blue-500 to-cyan-600':""
                   } hover:scale-110`}
               >
                 {badge}
