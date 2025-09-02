@@ -715,7 +715,7 @@ const Contact = () => {
                         Visit Our Store
                       </h3>
                       <p className="text-gray-600 mb-4">
-                        17 Main Market, Malviya Nagar<br />
+                        16-17 Main Market, Malviya Nagar<br />
                         New Delhi, Delhi 110017
                       </p>
                       <Button
