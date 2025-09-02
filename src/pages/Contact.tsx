@@ -180,7 +180,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Our Store",
-      details: ["17 Main Market,", "Malviya Nagar, New Delhi, Delhi 110017", "India"],
+      details: ["16-17 Main Market,", "Malviya Nagar, New Delhi, Delhi 110017", "India"],
       color: "text-blue-500",
       onClick: handleAddressClick,
       clickable: true
