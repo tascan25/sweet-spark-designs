@@ -1,8 +1,8 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import { useState, useEffect } from "react";
+import peacockBg from "@/assets/bg/pcbg.png"; // Add your peacock background image
 
 const testimonials = [
   {
@@ -51,8 +51,20 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-50 via-amber-50 to-amber-100">
-      <div className="max-w-7xl mx-auto">
+    <section 
+      className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(253, 240, 242, 0.4), rgba(255, 243, 224, 0.5)), url(${peacockBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#fdf0f2'
+      }}
+    >
+      {/* Subtle overlay for better content readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-50/70 via-amber-50/60 to-amber-100/70 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,10 +72,10 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-4 text-shadow-sm">
             What Our <span className="text-gradient">Customers</span> Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
             Don't just take our word for it - hear from our delighted customers
           </p>
         </motion.div>
@@ -77,7 +89,7 @@ const Testimonials = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <Card className="max-w-4xl mx-auto rounded-3xl shadow-xl bg-gradient-to-br from-cream-50 to-white border-0">
+          <Card className="max-w-4xl mx-auto rounded-3xl shadow-xl bg-white/90 backdrop-blur-sm border border-white/30">
             <CardContent className="p-12 text-center relative">
               <motion.div
                 initial={{ scale: 0 }}
@@ -147,10 +159,10 @@ const Testimonials = () => {
               className="cursor-pointer"
               onClick={() => setCurrentIndex(index)}
             >
-              <Card className={`rounded-2xl transition-all duration-300 hover:shadow-lg ${
+              <Card className={`rounded-2xl transition-all duration-300 hover:shadow-lg backdrop-blur-sm ${
                 index === currentIndex
-                  ? "ring-2 ring-saffron-500 bg-saffron-50"
-                  : "bg-white hover:bg-gray-50"
+                  ? "ring-2 ring-saffron-500 bg-saffron-50/90 border-saffron-200/50"
+                  : "bg-white/80 hover:bg-white/90 border-white/30"
               }`}>
                 <CardContent className="p-6">
                   <div className="text-center mb-4">
@@ -161,14 +173,14 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-sm text-gray-700 mb-4 line-clamp-3">
                     "{testimonial.text}"
                   </p>
                   <div className="text-center">
                     <div className="font-semibold text-gray-800 text-sm">
                       {testimonial.name}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-600">
                       {testimonial.location}
                     </div>
                   </div>
